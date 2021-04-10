@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LuisHCRProject</title>
@@ -11,10 +10,18 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="preload" href="css/styles.css" as="style">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="css/all.min.css" as="style">
+  <link rel="stylesheet" href="css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.gstatic.com/">
 
-</head>
+  <script defer type="text/javascript" src="js/index.js"></script>
+
+  </head>
 <body>
+
+  <!--
+
   <header>
     <h1 class="titulo">         
      PÁGINA EN CONSTRUCCIÓN
@@ -23,20 +30,62 @@
   </header>
 </br>
 
-<div class="nav-bg contenedor">
-  <nav class="nav-principal ">
-    <a href="index.html">Inicio</a>
-    <a href="mantenimiento.html">Sobre mí</a>
-    <a href="mantenimiento.html">Blog</a>
-    <a href="mantenimiento.html">Portafolio</a>
-    <a href="mantenimiento.html">Contacto</a>
-  </nav>
+ -->
+
+<!-- Inicia el menú de navegación -->
+
+<div class="nav-background">
+  <nav class="nav">
+
+    <div class="nav-responsive">
+      <div class="nav-logo">
+        <a href="index.html"> <img src="img/LogoMakr-306kZJ.png" width="77px" height="77px" alt="LOGO">
+          <span>
+            <img src="img/LogoMakr-7bM4w8.png" width="77px" height="77px" alt="LOGO2">
+          </span>
+        </a>
+      </div>
+      <button class="nav-toggle" onclick="showmenu()">
+        <img src="img/toggle.png" width="40px" height="30px" alt="toggle">
+      </button>
+    </div>
+
+    <div class="nav-logo nav-logo_hider">
+      <a href="index.html"> <img src="img/LogoMakr-306kZJ.png" width="77px" height="77px" alt="LOGO">
+        <span>
+          <img src="img/LogoMakr-7bM4w8.png" width="77px" height="77px" alt="LOGO2">
+        </span>
+      </a>
+    </div>
+
+    <div class="nav-links nav-links_hider" id="id-links">
+      <a href="index.html">Inicio</a>
+      <a href="mantenimiento.html">Blog</a>
+      <a href="mantenimiento.html">Portafolio</a>
+      <a href="mantenimiento.html">Contacto</a>
+    </div>
+
+    <div class="nav-cv nav-cv_hider" id="id-cv">
+      <a href="#"><img src="img/LogoMakr-8CookW.png" width="220px" height="65px" alt="LOGO-CV">
+        <span>
+          <img src="img/LogoMakr-8CookW2.png" width="220px" height="65px" alt="LOGO-CV2">
+        </span>
+      </a>
+    </div>
+
+  </nav>  
 </div>
 
-  <img src="img/banner22.png" alt="Imagen de portada" class="centrado">
+<!-- Termina el menú de navegación -->
 
-  <section class="contenedor">
-    <h2 class="portada">Instalaciones electrotécnicas y automáticas. Instalaciones térmicas. Desarrollo web. Seguridad informática. </h2>
+
+<!-- Empieza Hero  -->
+
+
+  <img src="img/banner2.png" alt="Imagen de portada" class="centrado">
+
+  <section class="body-container">
+    <h2 class="portada">Instalaciones eléctricas y automáticas. Instalaciones térmicas. Desarrollo web. Seguridad informática. </h2>
     <br>
     <p>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="76" height="76" viewBox="0 0 24 24" stroke-width="2" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -52,9 +101,9 @@
 <br>
 <br>
   <main>
-    <h2 class="contenedor">Skills</h2>
+    <h2 class="body-container">Skills</h2>
 <br>
-<section class="contenedor">
+<section class="body-container">
     <h3>Técnico superior en sistemas electrotécnicos y automáticos </h3>
     <p>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -66,9 +115,8 @@
   </section>
 
 <br>
-<br>
 
-  <section class="contenedor">
+  <section class="body-container">
     <h3>Técnico en instalaciones solares térmicas </h3>
     <p>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-power" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -83,7 +131,7 @@
   <br>
 <br>
 
-    <section class="contenedor">
+    <section class="body-container">
     
       <h3>Desarrollo web front-end</h3>
       <p>
@@ -100,7 +148,7 @@
     <br>
 <br>
 
-    <section class="contenedor">
+    <section class="body-container">
       <h3>Seguridad Informática</h3>
       <p>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ff4500" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -120,10 +168,12 @@
 <br>
 
   <footer class="piepagina">
-    <p>Todos los derechos reservados. &copy; LuisHCR</p>
+    <div class="disclaimer">
+      <p>Todos los derechos reservados. &copy; LuisHCR</p>
+    </div>
   </footer>
 
   
 
 </body>
-</html>
+</html> 
