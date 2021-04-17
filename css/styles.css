@@ -12,7 +12,7 @@
 /*  AJUSTES GLOBALES */
 :root {
   --black: #000000;
-  --grey: #9c9c9c;
+  --grey: #5333ed;
   --greyclean: #bbbbbb;
   --white: #fffefe;
   --yellow: #fcec11;
@@ -24,6 +24,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  min-height: 100vh;
   font-size: 17px;
   font-family: 'Mali', cursive; 
    background-image: linear-gradient(to top, var(--greyclean) 0%, var(--black) 75%);
@@ -159,7 +160,7 @@ body {
   padding: 9px 15px 10px 15px;
   color: var(--white);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
   border-radius: 10px;
 }
