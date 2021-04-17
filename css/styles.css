@@ -16,7 +16,7 @@
   --greyclean: #bbbbbb;
   --white: #fffefe;
   --yellow: #fcec11;
-  --yellowclean: #fff99e;
+  --yellowclean: #fdf8b4;
 }
 
 html {
@@ -278,6 +278,7 @@ display: none;
   text-align: center;
   text-transform: uppercase;
   padding: 20px;
+  font-size: 20px;
 }
 
 .main h3 {
@@ -285,7 +286,15 @@ display: none;
   text-align: center;
 }
 
+.main-presentation {
+  padding: 20px;
+}
 
+.main-presentation a{
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: bold;
+}
 
 .main-service {
   display: flex;
@@ -295,7 +304,7 @@ display: none;
   padding: 40px 20px;
 }
 
-.main-service p {
+.main-presentation, .main-service p {
   color: var(--grey);
   line-height: 2;
   text-align: justify;
@@ -305,6 +314,8 @@ display: none;
   padding: 10px;
   border-radius: 10%;
 }
+
+
 
 
 
@@ -330,10 +341,8 @@ border-radius: 10px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--yellow);
+  color: var(--yellowclean);
 }
-
-
 
 .main-form_camp {
   margin-bottom: 10px;
@@ -342,7 +351,7 @@ border-radius: 10px;
 .main-form_camp label {
   color: var(--white);
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 5px 0px;
   display: block;
 }
 
@@ -352,6 +361,32 @@ border-radius: 10px;
   padding: 15px;
   border-radius: 5px;
 }
+
+.main-form-button {
+  background-color: var(--yellowclean);
+  color: var(--black);
+  padding: 10px 30px;
+  margin-top: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  width: auto;
+  text-align: center;
+  border: none;
+}
+
+.main-form-button:hover {
+  cursor: pointer;
+}
+
+.form-button_right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 
 
 
@@ -425,6 +460,7 @@ margin-bottom: 30px;
   }
 }
 
+
 @media (max-width: 668px){
   .nav {
     padding-bottom: 20px;
@@ -448,13 +484,20 @@ margin-bottom: 30px;
   .nav-toggle:focus:not(:focus-visible){
     outline: none;
   }
+
+  .main-form-button {
+    width: 100%;
+  }
 }
+
 
 @media (min-width: 668px){
   .main-services {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+ 
 
   /*
   .bar-icons_list i{

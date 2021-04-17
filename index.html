@@ -41,7 +41,7 @@
 
 <!-- Inicia el menú de navegación -->
 
-<div class="nav-background" id="page_up">
+<div class="nav-background" id="index">
   <nav class="nav">
 
     <div class="nav-responsive">
@@ -69,7 +69,7 @@
       <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
       <a href="#"><i class="fas fa-book"></i> Blog</a>
       <a href="#"><i class="fas fa-file-code"></i> Portafolio</a>
-      <a href="#page_contact"><i class="fas fa-envelope"></i> Contacto</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
     </div>
 
     <div class="nav-cv nav-cv_hider" id="id-cv">
@@ -106,7 +106,7 @@
 <!--  Inicia banner  -->
 
 <div class="hero">
-  <a href="#page_contact"> 
+  <a href="#contact"> 
     <img src="img/banner22v22soloblack.png" width="100%" alt="Banner"> 
     <span>
       <img src="img/banner22v22blackyellow.png" width="100%" alt="Banner"> 
@@ -121,6 +121,23 @@
 <!--  Inicia main  -->
 
 <main class="main boxshadow boxborder">
+
+  <h2>Presentación</h2>
+
+  <div class="main-presentation">
+    <p>
+      Hola, bienvenid@ a mi humilde morada. Me llamo Luis y he creado esta pequeña página web como puesta en práctica de mis conocimientos de programador. Me gustaría dejar claro que no soy diseñador web ni pretendo serlo al menos de momento. Esta es una web personal que se me ocurrió hacer para tener más visibilidad de cara a l@s empleadores/as y sobretrodo porque necesitaba realizar un blog de apuntes donde documentar todo lo aprendido/practicado y que además le pudiese ser de utilidad a la comunidad. Soy un apasionado de la informática, me gusta crear, trastear y montar entornos virtuales y físicos para aprender como funcionan las cosas a bajo nivel. Me encanta investigar y navegar en ese mar de información llamado internet. Si no necesitara dormir... ¡no dormiría! pues no me llegan las horas del día para aprender todo lo que me gustaría aprender. Mi objetivo a largo plazo es ser un sysadmin en una mega corporación tecnológica, si hay que soñar se sueña a lo grande.
+      <br>
+      <br>
+      A continuación, dejo un pequeño resumen de mi formación profesional hasta la fecha. Cualquier sugerencia, duda o crítica constructiva, estaré encantado de leerla. <a href="#contact">Click aquí para mandar un mensaje</a>
+    </p>
+  
+  </div>
+
+
+
+
+
 
   <h2>Formación</h2>
 
@@ -147,7 +164,7 @@
       <div class="main-serv_icons">
         <img src="img/markus-spiske-1LLh8k2_YFk-unsplash.jpg" class="main-serv_img" width="300px" height="350px">
       </div>
-      <p>Área en constante aprendizaje, realizando cursos online de forma autodidacta en plataformas como Udemy, Platzi, Freecodecamp, Youtube y proyectos personales.</p>
+      <p>En constante aprendizaje, realizando cursos online de forma autodidacta en plataformas como Udemy, Platzi, Freecodecamp, Youtube y proyectos personales.</p>
     </div>
       
     <div class="main-service">
@@ -160,14 +177,14 @@
   </div>
 
 
-  <div class="main-contact" id="page_contact">
+  <div class="main-contact" id="contact">
   
     <h2>Contacto</h2>
 
-    <form  class="main-form">
+    <form  name="form-contact" class="main-form" method="POST" data-netlify="true">
       <fieldset>
         <legend>
-          Formulario en construcción...
+          Por favor, rellene el siguiente formulario
         </legend>
 
         <div class="main-form_camps">
@@ -175,28 +192,26 @@
             <label>
               Nombre:
             </label>
-            <input class="main-form_input" type="text" placeholder="Escribe un nombre...">
+            <input class="main-form_input" type="text" name="client_name" placeholder="Escribe un nombre o apodo...">
           </div>
 
           <div class="main-form_camp">
             <label>
               E-mail:
             </label>
-            <input class="main-form_input" type="e-mail" placeholder="Escribe un correo eléctronico...">
+            <input class="main-form_input" type="e-mail" name="client_e-mail" placeholder="Escribe un correo eléctronico...">
           </div>
 
           <div class="main-form_camp">
             <label> Dejar un mensaje:</label>
-            <textarea  class="main-form_input" name="name" rows="2" cols="20"></textarea>
+            <textarea  class="main-form_input" name="client_message" rows="2" cols="20"></textarea>
           </div>
        </div>
-       <!-- 
-        <div class="main-form_camp">
-          <input type="submit" value="Enviar">
-          <p>
-          </p>
+       
+        <div class="main-form_camp form-button_right">
+          <input type="submit" class="main-form-button" value="Enviar">
         </div>
-        -->
+        
 
 
       </fieldset>
@@ -207,7 +222,7 @@
       <i class="fas fa-map-marked-alt"></i>
       <p>Alicante/Alacant, España</p>
       <br>
-      <a href="#page_up" id="page_down">Click aquí para volver arriba</a>
+      <a href="#index" id="contact">Click aquí para volver arriba</a>
     </div>
 
 
