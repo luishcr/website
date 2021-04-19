@@ -421,6 +421,10 @@ display: none;
   text-align: center;
 }
 
+.main-description {
+  padding: 20px;
+  margin-bottom: 40px;
+}
 
 
 .main-service {
@@ -431,7 +435,7 @@ display: none;
   padding: 40px 20px;
 }
 
-.main-presentation, .main-service p {
+.main-description, .main-service p {
   color: var(--grey);
   line-height: 2;
   text-align: justify;
