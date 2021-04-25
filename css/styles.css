@@ -12,7 +12,7 @@
 
 /*  AJUSTES GLOBALES */
 :root {
-  --black: #000000;
+  --black: #070707;
   --grey: #5333ed;
   --greyclean: #bbbbbb;
   --white: #fffefe;
@@ -87,7 +87,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #111; 
+  background: var(--black); 
   flex-direction: column;
   overflow: hidden;
   top: 0;
@@ -358,7 +358,7 @@ display: none;
 
 /*  COMIENZA BANNER  */
 
-.hero {
+/* .hero {
   padding: 15px 0px;
   text-align: center;
   border: none;
@@ -392,8 +392,7 @@ display: none;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
-
+ */
 
 /* TERMINA BANNER */
 
@@ -426,6 +425,15 @@ display: none;
   margin-bottom: 40px;
 }
 
+.main-description span {
+  font-weight: bold;
+}
+
+.main-description a {
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: bold;
+}
 
 .main-service {
   display: flex;
@@ -597,9 +605,6 @@ margin-bottom: 30px;
     font-size: 20px;
   }
 
-  .nav {
-    padding-bottom: 20px;
-  }
 
   .nav-responsive {
     display: flex;
