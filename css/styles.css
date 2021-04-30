@@ -370,14 +370,14 @@ display: none;
 
 
 
-
+/* 
 .main-contact {
   padding: 40px 0px;
 }
 
 .main-form {
 background-color: var(--purple);
-width: min(600px, 100%); /* Utiliza el valo más pequeño */
+width: min(600px, 100%);  /* Utiliza el valo más pequeño 
 margin: 0 auto;
 padding: 20px;
 border-radius: 10px;
@@ -437,7 +437,7 @@ border-radius: 10px;
 .form-button_right {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 
 
