@@ -28,8 +28,8 @@ html {
 }
 body {
   min-height: 100vh;
-  font-size: 17px;
-  font-family: 'Courgette', cursive; 
+  font-size: 20px;
+  font-family: 'Exo 2', sans-serif;  
   background-image: linear-gradient(to top, var(--grey) 0%, var(--black) 65%);
 }
 
@@ -550,8 +550,9 @@ border-radius: 10px;
     margin-bottom: 20px;
   }
 
-  .nav-logo_hider, .nav-links_hider, .nav-cv_hider {
+  .nav-logo_hider, .nav-links_hider {
     display: none;
+    transition: all 500ms linear;
   }
 
   .nav-toggle:focus:not(:focus-visible){
