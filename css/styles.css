@@ -538,6 +538,10 @@ border-radius: 10px;
     font-size: 20px;
   }
 
+  .presentation a i {
+    font-size: 20px;
+  }
+
   .nav-responsive {
     display: flex;
     justify-content: space-between;
