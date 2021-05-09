@@ -580,6 +580,38 @@ border-radius: 10px;
 
 
  
+/* BLOG */
 
+.blog__indice {
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--purple);
+  font-weight: bold;
+  user-select: none;
+}
 
+.blog__indice summary {
+  padding-top: 20px;
+}
 
+.blog__indice ul {
+  padding: 10px;
+}
+.blog__indice a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.blog__indice a:hover {
+  background-color: var(--purple);
+  border-radius: 5px;
+  color: var(--white);
+  padding: 10px;
+}
+
+.blog__indice ol {
+  margin: 5px 0px 25px;
+  font-weight: normal;
+}
