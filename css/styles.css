@@ -360,6 +360,7 @@ display: none;
   color: var(--purple);
   line-height: 2;
   text-align: justify;
+  user-select: none;
 }
 
 .main-serv_img {
@@ -602,13 +603,14 @@ border-radius: 10px;
 .blog__indice a {
   text-decoration: none;
   color: var(--purple);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .blog__indice a:hover {
   background-color: var(--purple);
-  border-radius: 5px;
   color: var(--white);
-  padding: 10px;
+  transition: 300ms;
 }
 
 .blog__indice ol {
