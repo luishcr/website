@@ -338,8 +338,8 @@ display: none;
   margin-bottom: 40px;
 }
 
-.main-description span {
-  font-weight: bold;
+.main-description p {
+  text-align: center;
 }
 
 .main-description a {
@@ -367,6 +367,26 @@ display: none;
   padding: 10px;
   border-radius: 10%;
 }
+
+
+.main-certificates {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.main-certificates__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.main-certificate {
+  width: 700px;
+  height: 500px;
+}
+
+
 
 
 
@@ -445,7 +465,7 @@ border-radius: 10px;
 
 
 .main-location {
-  margin: 50px 40px 40px;
+  margin: 120px 40px 40px;
   text-align: center;
 }
 
@@ -567,6 +587,12 @@ border-radius: 10px;
   .main-form-button {
     width: 100%;
   }
+
+  .main-certificate {
+    width: 350px;
+    height: 250px;
+  }
+  
 }
 
 
