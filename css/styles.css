@@ -195,6 +195,8 @@ body {
 
 .nav-background {
   background-color: var(--purple);
+  position: sticky;
+  top: 0;
   padding: 10px;
 }
 
@@ -325,6 +327,7 @@ display: none;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 60px;
   padding: 20px;
   font-size: 20px;
 }
@@ -466,24 +469,35 @@ border-radius: 10px;
 
 
 .main-location {
-  margin: 120px 40px 40px;
+  padding: 20px;
   text-align: center;
 }
 
-.main-location i {
+.main-location h2 {
+  margin-top: 100px;
   padding: 20px;
+}
+
+.main-location i {
+  padding: 10px;
   font-size: 50px;
 }
 
 .main-location p {
+  padding: 20px;
   line-height: 2;
-  margin-bottom: 20px;
 }
 
 .main-location a {
   text-decoration: none;
   color: var(--purple);
   font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.main-location a i {
+  font-size: 30px;
 }
 
 /* TERMINA MAIN */
@@ -512,7 +526,6 @@ border-radius: 10px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-
 }
 
 .footer--legal {
@@ -597,7 +610,7 @@ border-radius: 10px;
 }
 
 
-@media (min-width: 668px){
+@media (min-width: 800px){
   .main-services {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -645,3 +658,158 @@ border-radius: 10px;
   margin: 5px 0px 25px;
   font-weight: normal;
 }
+
+
+
+/* EFECTOS HOVER */
+
+
+/* Icon Up */
+@-webkit-keyframes hvr-icon-up {
+  0%,
+	50%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+	75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+@keyframes hvr-icon-up {
+  0%,
+	50%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+	75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+.hvr-icon-up {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-up .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-up:hover .hvr-icon, .hvr-icon-up:focus .hvr-icon, .hvr-icon-up:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-up;
+  animation-name: hvr-icon-up;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+/* Termina Icon Up */
+
+
+/* Icon Down */
+@-webkit-keyframes hvr-icon-down {
+  0%,
+	50%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+	75% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@keyframes hvr-icon-down {
+  0%,
+	50%,
+	100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%,
+	75% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+
+.hvr-icon-down {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-down .hvr-icon2 {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-down:hover .hvr-icon2, .hvr-icon-down:focus .hvr-icon2, .hvr-icon-down:active .hvr-icon2 {
+  -webkit-animation-name: hvr-icon-down;
+  animation-name: hvr-icon-down;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+/* Termina Icon Down */
+
+
+
+/* Icon Forward */
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.hvr-icon-forward .hvr-icon3 {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover .hvr-icon3, .hvr-icon-forward:focus .hvr-icon3, .hvr-icon-forward:active .hvr-icon3 {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+/* Temrina Icon Forward */
+
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Termina Grow */
