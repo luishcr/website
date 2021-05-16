@@ -33,6 +33,7 @@ body {
   background-image: linear-gradient(to top, var(--grey) 0%, var(--black) 65%);
 }
 
+a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
 
 .boxshadow {
@@ -268,15 +269,15 @@ body {
   transition: 500ms;
 }
 
-
 .nav-responsive{
-display: none;
+  display: none;
 }
 
 .nav-toggle {
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /*  TERMINA BARRA DE NAVEGACIÓN */
