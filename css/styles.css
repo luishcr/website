@@ -334,7 +334,7 @@ a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
   text-transform: uppercase;
   margin-top: 60px;
   padding: 20px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .main h3 {
@@ -350,6 +350,7 @@ a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 .main-description p {
   text-align: center;
 }
+
 
 .main-description a {
   text-decoration: none;
@@ -376,10 +377,6 @@ a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
   padding: 10px;
   border-radius: 10%;
 }
-
-
-
-
 
 .main-certificates {
   margin-top: 40px;
@@ -412,9 +409,6 @@ a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
   text-decoration: none;
   color: var(--purple);
 }
-
-
-
 
 
 
