@@ -1,0 +1,132 @@
+******************************************
+*       LINUX_Commands_&_Scripting       *
+******************************************
+
+# Escapar espacio:
+	/	->	mkdir la/ casa/ blanca
+	" "	->	mkdir "la casa blanca"
+
+# Ejecutar comando anterior:
+	!!	->	nano test.txt	->	sudo !! 	-> 	sudo nano test.txt
+
+# Copy&Paste en terminal:
+	Selecionar text (clic izq.) y pegar con (mouse3 rueda)
+
+# Borrar directorios no vacíos y validar:
+	rm -ri	->	rm -ri test
+
+# Archivo de Configuración GRUB:
+	sudo nano /etc/default/grub
+
+# Borar paquetes que no se utilizan:
+	sudo apt autoremove
+
+# Enlace simbólico (apunta al fichero) [El enlace duro apunta al contenido]
+	ln -s 	->	ln -s prueba.txt ../pruebaB/pruebaRandom.txt
+		->	ln -s pepazo otrodir	(crear enlaces blandos o accesos directos entre directorios)
+
+# Expresiones regulares:
+	*	(cero o más caracteres)	->	rm * .txt 	-> 	borra todos los archivos terminados en .txt
+	?	(1 caracter) ->		rm ?.txt	->	borra todos los archivos con un caracter y acaban en txt
+	[] 	(or)	->	rm fichero[AB].txt	-> 	borra todos los ficheros acabados en A o B.txt (ficheroA.txt y ficheroB.txt)
+	[^AB]	  (nor)	->	rm fichero[^AB].txt	->	borra todos los ficheros no acabados en A o B.txt (ficheroC.txt, fichero5.txt...)	
+	{AB, AC}	-> 	rm f{AB, AC}.txt	->	borra ficheros detallando más caracteres en {} (fAB.txt, fAC.txt, fH.txt...)
+
+# Comandos de redirección y filtrado con expresionaes regulares. (stdin "0" (standar input), stdout"1" (standard output), stderror"2" (standard error):
+	ls -la > fichero.txt		(redirige la información a fichero.txt)
+	ls -la >> fichero.txt		(añade información a lo que ya hay en fichero.txt)
+	grep		->	grep teclados productos.txt	(filtra teclados del fichero productos.txt)
+	cut		->	cut -d " " -f 3 fichero.txt	(muestra el campo 3, separado de un espacio de fichero.txt"		
+	sed		-> 	sed "s/  */ /g"	fichero.txt	-> 	(Stream Editor, modifica donde hay 2 o más espacios por 1 espacio)
+	tail		->	tail -n +2		->	(filtra a partir de la línea 2)
+	| (pipe)	->	ls -l | tail -n +2 | sed "s/  */ /g" | cut -d " " -f 9		(este comando en el directorio home, filtra todos los nombres de las capetas)	
+	2> /etc/null	->	(redirige errores al vacío/agujero negro)	
+
+
+
+
+**********************************************
+*       CREACIÓN Y GESTIÓN DE USUARIOS       *
+**********************************************
+
+# Listar usuarios filtrados:
+	cat /etc/passwd | grep 'sh$' | awk '{print $1} FS='='
+	cat /etc/passwd | grep 'sh$' | cut ':' -f 1
+
+# Añadir usuario:
+	useradd -d /home/pepito -s /bin/bash jackson
+
+# Añadir contraseña:
+	passwd jackson	
+
+# Añadir grupo:
+	groupadd laboratorio
+
+# Añadir propietario y grupo:
+	chown jackson jackson
+	chgroup laboratorio jackson
+	chown jackson:laboratorio jackson	(añade propietario:grupo a la vez)
+
+# Permisos (-rwx r-x r-x) = (111 101 101) = (755) -> (propietario "u", grupo "g", otros "o")
+fuente: https://mural.uv.es/oshuso/8339_permisos_y_atributos.html
+	-	File type: - indicates regular file, (-f) indicates executable, (-d) indicates directory, (-l) indicates link
+	-r	Read	
+	w	write
+	x	execute (-f) | atravezar (-d) 
+
+# Añadir/quitar permisos: (-rwx r-x r-x) = (755)
+	chmod g+w, o-x		->	(-rwx rwx r) = (774)
+
+# Añadir permisos avanzados (root no puede borrar recurso)
+	chattr +i -V secret.txt
+
+# Ver permiso especial:
+	lsattr secret.txt
+
+# Permiso SUID (Set User ID):
+	chmod 4755 /usr/bin/find	(le permite a un usuario no privilegiado listar ficheros privilegiados. Se puede escalar privilegios "gtfobins.github.io/find#suid")
+
+# Buscar ficheros/binarios con privilegios SUID:
+	find \-perm -4000 2>/dev/null	(encuentra binarios SUID y envía errores al agujero negro)
+
+# Buscar ficheros con capacidad de escritura en etc (/etc/passwd):
+	find \-writable 2>/dev/null | grep "etc"
+
+# Generar contraseña para reemplazo en "root:x:":
+	openssl passwd	(contraseña en DES unix)
+	hash-ifentifier		(averiguar tipo hash)
+	hashid			(averiguar tipo hash)
+	nano /etc/passwd	(abrir y escribir "hash -> x")
+
+# OFFTOPIC:  averiguar como están encriptadas las contraseñas:
+	cat /etc/login.defs | grep "ENCRYPT_METHOD"
+
+# OFFTOPIC: como romper contraseña:
+	gunzip /usr/wordlists/rockyou.txt.gz
+	cat /etc/shadow | grep jackson > hash_para_romper
+	john --wordlist=rockyou.txt hash_para_romper
+	john --show hash_para_romper
+	
+
+# Tareas CRON (tarea que se ejecuta a nivel de sistema durante un intervalo de tiempo) (command to execute: min 0-59, hour 0-23, day of month 1-31, month 1-12, day of week, 0-7) 
+font: https://www.redeszone.net/2017/01/09/utilizar-cron-crontab-linux-programar-tareas/
+	cd /etc/cron.d		(Ruta donde el servicio carga las tareas CRON)
+	service cron status
+	nano autoborrado.sh	->	#!/bin/bash	sleep10		rm -r /tmp/*	
+	nano tarea 	->	***** root /home/jackson/Desktop/autoborrado.sh
+	service cron start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
