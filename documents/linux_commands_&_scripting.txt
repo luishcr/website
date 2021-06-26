@@ -2,6 +2,26 @@
 *       LINUX_Commands_&_Scripting       *
 ******************************************
 
+# Listar archivos/directorios:
+	ls -alh	-> 	-a (muetra archivos ocultos), -l (mostrar en lista), -h (mostrar peso en formato humano, KB, MB)
+        ll 	-> 	las -alF (alias en el fichero .bashrc, ejemplo: alias comando='comando -argumentos')
+
+# Copiar archivos/directorios:
+	cp	->	cp ejemplo.txt MisDocumentos
+	cp -a 	->	copa de forma recursiva
+
+# Copiar/sincronizar muchos archivos/directorios (backups):
+	rsync -av	->	rsync -av project1/ project2/
+
+# Mover archivos/directorios:
+	mv 	->	mv texto.txt Documents/
+
+# Crear ficheros:
+	touch	->	touch texto.txt
+
+# Crear directorio:
+	mkdir 	->	mkdir Documents/test
+
 # Escapar espacio:
 	/	->	mkdir la/ casa/ blanca
 	" "	->	mkdir "la casa blanca"
@@ -13,7 +33,11 @@
 	Selecionar text (clic izq.) y pegar con (mouse3 rueda)
 
 # Borrar directorios no vacíos y validar:
-	rm -ri	->	rm -ri test
+	rm -ri	->	rm -ri test/	-r (borra de forma recursiva), -i (pregunta el borrado)
+	rm -rf	->	rm -rf		-f (fuerza el borrado, sin preguntar)	 
+
+# Mostrar uso de disco:
+	du -sh /var/lib		->	
 
 # Archivo de Configuración GRUB:
 	sudo nano /etc/default/grub
@@ -41,13 +65,6 @@
 	tail		->	tail -n +2		->	(filtra a partir de la línea 2)
 	| (pipe)	->	ls -l | tail -n +2 | sed "s/  */ /g" | cut -d " " -f 9		(este comando en el directorio home, filtra todos los nombres de las capetas)	
 	2> /etc/null	->	(redirige errores al vacío/agujero negro)	
-
-
-
-
-**********************************************
-*       CREACIÓN Y GESTIÓN DE USUARIOS       *
-**********************************************
 
 # Listar usuarios filtrados:
 	cat /etc/passwd | grep 'sh$' | awk '{print $1} FS='='
