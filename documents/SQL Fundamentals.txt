@@ -1,6 +1,6 @@
-*************************
-*          SQL          *	
-*************************
+*******************************
+*         Comandos SQL        *	
+*******************************
 
 # FUNDAMENTOS SQL.
 Registro: Conjunto de campos que contienen los datos relacionados con una misma entidad u objeto (Record = Row = tuple = Single entry) 
@@ -142,6 +142,16 @@ SELECT COUNT(id), Nombre FROM Clientes GROUP BY Nombre ORDER BY COUNT(id) DESC;	
 SELECT CONCAT(Nombre, ' ', Apellido) AS 'Nombre Completo', Direccion FROM Clientes WHERE CONCAT(Nombre, ' ', Apellido) LIKE '%Pepo Pitt%';		(Concatenar dos columnas)
 SELECT * FROM Reservas WHERE Fecha = '2021-05-03' AND Mesas IN (2,3);		(Filtrar reservas de mesas 2 y 3 para la fecha 2021-05-03)
 
+
+
+
+# Fuentes:
+Eliezer de León: https://www.youtube.com/playlist?list=PLINy58Bvq5_KD8DQgUBPdAarYQ-CBbDpm
+
+Código con Juan: https://www.youtube.com/watch?v=e8gaffa3Ca8
+
+freeCodeCamp.org: https://www.youtube.com/watch?v=HXV3zeQKqGY
+		  https://www.youtube.com/watch?v=4cWkVbC2bNE
 
 
 
