@@ -271,6 +271,16 @@ font: https://www.redeszone.net/2017/01/09/utilizar-cron-crontab-linux-programar
 	ping -c 1 10.10.10.7
 
 
+* Conexión remota con ssh:
+	ssh usuario@dominio/ip 
+	ssh-copy-id root@ip
+	ssh -t root@ip <comando>	(simula terminal para el comando)
+ 	ssh -D <puerto> root@ip    (usar ssh como proxy) 
+ 	ssh -X root@ip	(ejecuta servicio "x" interfaz grafica del servidor en tu máquina)
+ 	ssh -L 2020:<ipprivada>:22 root@ip	(crea puerto 2020 de tu máquiona y  apunta a un servidor 2 a travez de un servidor 1) Para entrar al server2: ssh -p 2020 root@localhost
+	ssh -R 2020:localhost:22 root@ipexterno	(se crea el puerto 2020 en el servidor externo y apunta al 22 de un server2 local)
+
+
 
 
 
