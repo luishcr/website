@@ -1,220 +1,242 @@
 <!-- <!DOCTYPE html> -->
 <html lang="en">
   <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LuisHCRProject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LuisHCRProject</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
 
-  <script  type="text/javascript" src="js/index.js"></script>
-
-
-
+    <script type="text/javascript" src="js/index.js"></script>
   </head>
 
-<body>
+  <body>
+    <!-- Inicia el menú de navegación -->
 
+    <div class="nav-background" id="inicio">
+      <nav class="nav">
+        <div class="nav-responsive">
+          <div class="nav-logo">
+            <a href="index.html#inicio">
+              <img
+                src="img/LogoMakr-306kZJ.png"
+                width="55px"
+                height="55px"
+                alt="LOGO"
+              />
+              <span>
+                <img
+                  src="img/LogoMakr-7bM4w8.png"
+                  width="55px"
+                  height="55px"
+                  alt="LOGO2"
+                />
+              </span>
+            </a>
+          </div>
+          <button class="nav-toggle" onclick="showmenu()">
+            <img src="img/toggle.png" width="40px" height="30px" alt="toggle" />
+          </button>
+        </div>
 
-
-  <!-- Inicia el menú de navegación -->
-
-
-  <div class="nav-background" id="inicio">
-    <nav class="nav">
-
-      <div class="nav-responsive">
-        <div class="nav-logo">
-          <a href="index.html#inicio"> <img src="img/LogoMakr-306kZJ.png" width="55px" height="55px" alt="LOGO">
+        <div class="nav-logo nav-logo_hider">
+          <a href="index.html#inicio">
+            <img
+              src="img/LogoMakr-306kZJ.png"
+              width="55px"
+              height="55px"
+              alt="LOGO"
+            />
             <span>
-              <img src="img/LogoMakr-7bM4w8.png" width="55px" height="55px" alt="LOGO2">
+              <img
+                src="img/LogoMakr-7bM4w8.png"
+                width="55px"
+                height="55px"
+                alt="LOGO2"
+              />
             </span>
           </a>
         </div>
-        <button class="nav-toggle" onclick="showmenu()">
-          <img src="img/toggle.png" width="40px" height="30px" alt="toggle">
-        </button>
+
+        <div class="nav-links nav-links_hider" id="id-links">
+          <a href="index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
+          <a href="#indice"><i class="fas fa-book"></i> Blog</a>
+          <a href="LuisHCR_CV.pdf" target="_blank"
+            ><i class="fas fa-file-pdf"></i> Currículum</a
+          >
+          <a href="index.html#contacto"
+            ><i class="fas fa-envelope"></i> Contacto</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <!-- Termina el menú de navegación -->
+
+    <!--  Inicia barra de iconos  -->
+
+    <div class="bar-icons">
+      <ul class="bar-icons_list">
+        <li class="bar-icons_item">
+          <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+            <i class="fab fa-linkedin"> </i>
+          </a>
+        </li>
+        <li class="bar-icons_item">
+          <a href="https://github.com/LuisHCR" target="_blank">
+            <i class="fab fa-github-square"> </i>
+          </a>
+        </li>
+        <li class="bar-icons_item">
+          <a href="https://twitter.com/luishcerre" target="_blank">
+            <i class="fab fa-twitter-square"> </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!--  Termina barra de iconos  -->
+
+    <!--  Inicia main  -->
+
+    <main class="main boxshadow boxborder" id="indice">
+      <h2>
+        Blog de notas <br />
+        (en construcción)
+      </h2>
+      <br />
+      <h3>ÍNDICE PRINCIPAL</h3>
+
+      <div class="blog__indice">
+        <details>
+          <summary>Electricidad/Electrónica</summary>
+          <ol>
+            <ul>
+              <a href="documents/REBT_BOE-326.pdf" target="_blank">REBT</a>
+            </ul>
+            <ul>
+              <a href="documents/Guia_REBT.pdf" target="_blank">Guía REBT</a>
+            </ul>
+          </ol>
+        </details>
+
+        <details open>
+          <summary>Programación</summary>
+          <ol>
+            <ul>
+              <a href="img/frontend.png" target="_blank">Roadmap</a>
+            </ul>
+            <ul>
+              <a href="cheatsheets/html5.pdf" target="_blank"
+                >CheatSheet HTML</a
+              >
+            </ul>
+            <ul>
+              <a href="cheatsheets/css3.pdf" target="_blank">CheatSheet CSS</a>
+            </ul>
+            <ul>
+              <a href="cheatsheets/javascript.pdf" target="_blank"
+                >CheatSheet Javascript</a
+              >
+            </ul>
+          </ol>
+        </details>
+
+        <details open>
+          <summary>Sysadmin/Ciberseguridad</summary>
+          <ol>
+            <ul>
+              <a href="img/devops.png" target="_blank">Roadmap</a>
+            </ul>
+            <ul>
+              <a href="documents/Linux Fundamentals.txt" target="_blank"
+                >Linux Fundamentals y Hacking Ético</a
+              >
+            </ul>
+            <ul>
+              <a href="documents/SQL Fundamentals.txt" target="_blank"
+                >SQL Fundamentals</a
+              >
+            </ul>
+            <ul>
+              <a href="documents/Docker Fundamentals.txt" target="_blank"
+                >Docker Fundamentals</a
+              >
+            </ul>
+          </ol>
+        </details>
       </div>
 
-      <div class="nav-logo nav-logo_hider">
-        <a href="index.html#inicio"> <img src="img/LogoMakr-306kZJ.png" width="55px" height="55px" alt="LOGO">
+      <div class="main-location">
+        <i class="fas fa-map-marked-alt"></i>
+        <p>Alicante/Alacant, España</p>
+        <br />
+        <a href="#indice" class="hvr-icon-up hvr-icon" id="contact"
+          >Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i
+        ></a>
+      </div>
+    </main>
+
+    <!--  Termina main  -->
+
+    <!--  Inicia footer  -->
+
+    <footer class="footer">
+      <div class="nav-logo">
+        <a href="index.html#inicio">
+          <img
+            src="img/LogoMakr-306kZJ.png"
+            width="77px"
+            height="77px"
+            alt="LOGO"
+          />
           <span>
-            <img src="img/LogoMakr-7bM4w8.png" width="55px" height="55px" alt="LOGO2">
+            <img
+              src="img/LogoMakr-7bM4w8.png"
+              width="77px"
+              height="77px"
+              alt="LOGO2"
+            />
           </span>
         </a>
       </div>
-
-      <div class="nav-links nav-links_hider" id="id-links">
-        <a href="index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
-        <a href="#indice"><i class="fas fa-book"></i> Blog</a>
-        <a href="LuisHCR_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Currículum</a>
-        <a href="index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
-
+      <div>
+        <ul class="footer--bar_list">
+          <li class="bar-icons_item">
+            <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+              <i class="fab fa-linkedin"> </i>
+            </a>
+          </li>
+          <li class="bar-icons_item">
+            <a href="https://github.com/LuisHCR" target="_blank">
+              <i class="fab fa-github-square"> </i>
+            </a>
+          </li>
+          <li class="bar-icons_item">
+            <a href="https://twitter.com/luishcerre" target="_blank">
+              <i class="fab fa-twitter-square"> </i>
+            </a>
+          </li>
+        </ul>
       </div>
+      <div class="footer--disclaimer">
+        <p>&copy; LuisHCR</p>
+        <br />
+      </div>
+      <div class="footer--legal">
+        <a href="aviso-legal.html">Aviso legal</a>
+      </div>
+    </footer>
 
-    </nav>  
-  </div>
-
-  <!-- Termina el menú de navegación -->
-
-
-
-
-  <!--  Inicia barra de iconos  -->
-
-  <div class="bar-icons">
-    <ul class="bar-icons_list">
-      <li class="bar-icons_item"> <a href="https://www.linkedin.com/in/luishcr" target="_blank"> <i class="fab fa-linkedin "> </i> </a> </li>
-      <li class="bar-icons_item"> <a href="https://github.com/LuisHCR" target="_blank"> <i class="fab fa-github-square"> </i> </a> </li>
-      <li class="bar-icons_item"> <a href="https://twitter.com/luishcerre" target="_blank"> <i class="fab fa-twitter-square"> </i> </a> </li>
-    </ul>
-  </div>
-
-  <!--  Termina barra de iconos  -->
-
-
-
-  <!--  Inicia main  -->
-
-  <main class="main boxshadow boxborder" id="indice">
-
-    <h2 >Blog de notas <br> (en construcción)</h2>
-    <br>
-    <h3>ÍNDICE PRINCIPAL</h3>
-
-    <div class="blog__indice">
-
-      <details>
-        <summary>
-          Electricidad/Electrónica
-        </summary>
-        <ol>
-          <ul>
-            <a href="documents/REBT_BOE-326.pdf" target="_blank">REBT</a> 
-          </ul>
-          <ul>
-            <a href="documents/Guia_REBT.pdf" target="_blank">Guía REBT</a> 
-          </ul>
-          <ul>
-            <a href="#">Domótica e Inmótica</a> 
-          </ul>
-          <ul>
-            <a href="#">Telecomunicaciones</a> 
-          </ul>
-          <ul>
-            <a href="#">Robótica industrial</a> 
-          </ul>
-          <ul>
-            <a href="#">Formulitas/CheatSheets</a> 
-          </ul>
-      </details>
-
-
-      <details>
-        <summary>
-          Programación
-        </summary>
-        <ol>
-          <ul>
-            <a href="img/frontend.png" target="_blank">Roadmap</a>
-          </ul>
-          <ul>
-           <a href="cheatsheets/html5.pdf" target="_blank">CheatSheet HTML</a> 
-          </ul>
-          <ul>
-           <a href="cheatsheets/css3.pdf" target="_blank">CheatSheet CSS</a> 
-          </ul>
-          <ul>
-           <a href="cheatsheets/javascript.pdf" target="_blank">CheatSheet Javascript</a> 
-          </ul>
-          <ul>
-           <a href="#">CheatSheet Python</a> 
-          </ul>
-          <ul>
-           <a href="#">Plataformas de aprendizaje y práctica</a> 
-          </ul>
-        </ol>
-      </details>
-
-
-      <details open>
-        <summary>
-          Sysadmin/Ciberseguridad
-        </summary>
-        <ol>
-          <ul>
-            <a href="img/devops.png" target="_blank">Roadmap</a>
-          </ul>
-           <ul>
-            <a href="documents/Linux Fundamentals.txt" target="_blank">Linux Fundamentals y Hacking Ético</a> 
-           </ul>
-          <ul>
-            <a href="documents/SQL Fundamentals.txt" target="_blank">SQL Fundamentals</a>
-          </ul>
-           <ul>
-            <a href="documents/Docker Fundamentals.txt" target="_blank">Docker Fundamentals</a> 
-           </ul>
-          <ul>
-            <a href="#">Windows-OS</a> 
-           </ul>
-           <ul>
-             <a href="#">Raspberry_pi</a>
-           </ul>
-
-        </ol>
-      </details>
-
-    </div>
-    
-
-
-    <div class="main-location"> 
-      <i class="fas fa-map-marked-alt"></i>
-      <p>Alicante/Alacant, España</p>
-      <br>
-      <a href="#indice" class="hvr-icon-up hvr-icon" id="contact">Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i></a>
-    </div>
-
-
-  </main>
-
-  <!--  Termina main  -->
-    
-
-
-  <!--  Inicia footer  -->
-
-  <footer class="footer">
-    <div class="nav-logo">
-      <a href="index.html#inicio"> <img src="img/LogoMakr-306kZJ.png" width="77px" height="77px" alt="LOGO">
-        <span>
-          <img src="img/LogoMakr-7bM4w8.png" width="77px" height="77px" alt="LOGO2">
-        </span>
-      </a>
-    </div>
-    <div>  
-      <ul class="footer--bar_list">
-        <li class="bar-icons_item"> <a href="https://www.linkedin.com/in/luishcr" target="_blank"> <i class="fab fa-linkedin "> </i> </a> </li>
-        <li class="bar-icons_item"> <a href="https://github.com/LuisHCR" target="_blank"> <i class="fab fa-github-square"> </i> </a> </li>
-        <li class="bar-icons_item"> <a href="https://twitter.com/luishcerre" target="_blank"> <i class="fab fa-twitter-square"> </i> </a> </li>
-      </ul>
-    </div>
-    <div class="footer--disclaimer">
-      <p> &copy; LuisHCR</p><br>
-    </div>
-    <div class="footer--legal">
-      <a href="aviso-legal.html">Aviso legal</a>
-    </div>
-    
-  </footer>
-
-  <!--  Termina footer  -->
-
-</body>
-</html> 
+    <!--  Termina footer  -->
+  </body>
+</html>
