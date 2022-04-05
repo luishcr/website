@@ -27,7 +27,7 @@ html {
 body {
   min-height: 100vh;
   font-size: 2rem;
-  font-family: "Exo 2", Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   background-image: linear-gradient(to top, var(--grey) 0%, var(--black) 65%);
 }
 
