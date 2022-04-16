@@ -478,7 +478,6 @@ a {
 /* FORMULARIO DE CONTACTO */
 
 .main-contact {
-  height: 50vh;
   margin: 2rem;
   padding: 2rem;
 }
@@ -518,6 +517,7 @@ a {
 
 .contact-form__input {
   width: 100%;
+  font-size: 2rem;
   border: none;
   padding: 1.5rem;
   border-radius: 0.5rem;
