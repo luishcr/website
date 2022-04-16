@@ -1,17 +1,7 @@
+// Función para mostar/ocultar menú de navegación en móbiles
+let navToggle = document.getElementById("nav-toggle");
+navToggle.addEventListener("click", showmenu);
 
 function showmenu() {
-    document.getElementById("id-links").classList.toggle("nav-links_hider");
+  document.getElementById("id-links").classList.toggle("nav-links_hider");
 }
-
-/*
-const $detailsList = document.querySelectorAll('details') 
-$detailsList.forEach(($details) => {
-    $details.querySelector('summary').addEventListener('click'), expand)
-    })
-
-function expand() {
-    $detailsList.forEach(($details) => {
-        $details.removeAttribute('open')
-    })
-}
-*/

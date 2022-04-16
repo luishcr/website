@@ -1,23 +1,15 @@
-<!-- <!DOCTYPE html> -->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>LuisHCRProject</title>
+    <title>👨🏽‍💻 LuisHCRWebsite</title>
 
-    <!-- <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css" /> -->
     <!-- <link rel="preload" href="css/styles.css" as="style"> -->
     <link rel="stylesheet" href="css/styles.css" />
     <!-- <link rel="preload" href="css/all.min.css" as="style"> -->
     <link rel="stylesheet" href="css/all.min.css" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
-      rel="stylesheet"
-    />
 
     <script defer type="text/javascript" src="js/index.js"></script>
 
@@ -27,8 +19,8 @@
   <body>
     <!-- Inicia el menú de navegación -->
 
-    <div class="nav-background">
-      <nav class="nav">
+    <header class="nav-menu__background">
+      <nav class="nav-menu">
         <div class="nav-responsive">
           <div class="nav-logo">
             <a href="index.html">
@@ -48,7 +40,7 @@
               </span>
             </a>
           </div>
-          <button class="nav-toggle" onclick="showmenu()">
+          <button class="nav-toggle" id="nav-toggle">
             <img src="img/toggle.png" width="40px" height="30px" alt="toggle" />
           </button>
         </div>
@@ -74,20 +66,23 @@
 
         <div class="nav-links nav-links_hider" id="id-links">
           <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
-          <a href="blog.html#indice"><i class="fas fa-book"></i> Blog</a>
+          <a href="blog.html"><i class="fas fa-book"></i> Blog</a>
+          <a href="portfolio.html"
+            ><i class="fas fa-file-code"></i> Portafolio</a
+          >
           <a href="LuisHCR_CV.pdf" target="_blank"
             ><i class="fas fa-file-pdf"></i> Currículum</a
           >
-          <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a>
         </div>
       </nav>
-    </div>
+    </header>
 
     <!-- Termina el menú de navegación -->
 
     <!--  Inicia barra de iconos  -->
 
-    <div class="bar-icons">
+    <nav class="bar-icons">
       <ul class="bar-icons_list">
         <li class="bar-icons_item">
           <a href="https://www.linkedin.com/in/luishcr" target="_blank">
@@ -105,109 +100,156 @@
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
 
     <!--  Termina barra de iconos  -->
 
     <!--  Inicia main  -->
 
     <main class="main boxshadow boxborder" id="sobremi">
-      <h2>Sobre mí</h2>
-      <div class="main-description">
+      <article class="main-description">
+        <h2>Sobre mí</h2>
         <p>
-          Hola! te doy la bienvenida a mi página web, soy LuisHCR y soy técnico electricista. <br />
-          La verdad es que, aunque llevo un tiempo dedicandome a la
-          electrónica/electricidad, siempre me llamó muchísimo la atención
-          también el desarrollo de software. Actualmente estoy enfocado en
-          mejorar éstas habilidades y crear un portafolio. Puedes consultar mis
-          avances en mi repositorio de <a href="https://github.com/LuisHCR" target="_blank">
-            github
-          </a> <br />
-          Agradeceria cualquier consulta o sugerencia enviada al correo: <br />
-          <a href="mailto:luishcr@pm.me" class="hvr-grow"
-            >luishcr@pm.me</a
+          Hola! te doy la bienvenida a mi página web, me llamo Luis Cubillos y
+          soy técnico electricista. <br />
+          Aunque llevo un tiempo dedicandome a la electrónica/electricidad,
+          siempre me interesé también por el desarrollo de software. Actualmente
+          estoy enfocado en mejorar éstas habilidades y crear un portafolio.
+          <br />
+          Puedes consultar mis avances en mi repositorio de
+
+          <a
+            href="https://github.com/LuisHCR "
+            class="hvr-icon-forward hvr-icon3"
+            target="_blank"
           >
+            GitHub <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+          ></a>
           <br />
         </p>
-      </div>
+      </article>
 
-      <h2>Habilidades</h2>
+      <article class="main-skills">
+        <h2>Habilidades</h2>
+        <section class="main-skills__grid">
+          <section class="main-skill">
+            <h3>Electrotecnia</h3>
+            <div class="main-serv_icons">
+              <img
+                src="img/markus-spiske-kK7uPfb2YWU-unsplash.jpg"
+                class="main-skill__img"
+                width="200em"
+                height="250em"
+              />
+            </div>
+            <p>
+              Estudié un ciclo formativo de grado superior de sistemas
+              electrotécnicos y automatizados en el
+              <a
+                href="https://www.cavanilles.org/images/Secretaria/Curso_2015-16/Ciclos/GS_SEA.pdf"
+                class="hvr-icon-forward hvr-icon3"
+                target="_blank"
+                >IES Antonio José Cavanilles
+                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+              ></a>
+            </p>
+          </section>
 
-      <div class="main-services">
-        <div class="main-service">
-          <h3>Electrotecnia</h3>
-          <div class="main-serv_icons">
-            <img
-              src="img/markus-spiske-kK7uPfb2YWU-unsplash.jpg"
-              class="main-serv_img"
-              width="200em"
-              height="250em"
-            />
-          </div>
-          <p>
-            Estudié un ciclo formativo de grado superior de sistemas
-            electrotécnicos y automatizados en el
-            <a
-              href="https://www.cavanilles.org/images/Secretaria/Curso_2015-16/Ciclos/GS_SEA.pdf"
-              target="_blank"
-              >IES Antonio José Cavanilles</a
-            >
-          </p>
-        </div>
+          <section class="main-skill">
+            <h3>Desarrollo de Software</h3>
+            <div class="main-serv_icons">
+              <img
+                src="img/markus-spiske-1LLh8k2_YFk-unsplash.jpg"
+                class="main-skill__img"
+                width="200em"
+                height="250em"
+              />
+            </div>
+            <p>
+              En constante aprendizaje y realizando cursos online de forma
+              autodidacta. Ver mi reto de finalización de
+              <a
+                href="https://luishcr.notion.site/100CursosOnline-0e3d900d03dd4cef8580dcac6cc35bc0"
+                class="hvr-icon-forward hvr-icon3"
+                target="_blank"
+                >#100CursosOnline
+                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+              ></a>
+            </p>
+          </section>
 
-        <div class="main-service">
-          <h3>Desarrollo de Software</h3>
-          <div class="main-serv_icons">
-            <img
-              src="img/markus-spiske-1LLh8k2_YFk-unsplash.jpg"
-              class="main-serv_img"
-              width="200em"
-              height="250em"
-            />
-          </div>
-          <p>
-            En constante aprendizaje, realizando cursos
-            online en plataformas como
-            <a href="https://www.freecodecamp.org/luishcr" target="_blank"
-              >freeCodeCamp</a
-            >
-            y <a href="https://platzi.com/p/luishcr/" target="_blank">Platzi. </a>
-         </p>
-        </div>
+          <sec class="main-skill">
+            <h3>Seguridad informática</h3>
+            <div class="main-serv_icons">
+              <img
+                src="img/fly-d-C5pXRFEjq3w-unsplash2.jpg"
+                class="main-skill__img"
+                width="200em"
+                height="250em"
+              />
+            </div>
+            <p>
+              Realizé un CP de<a
+                href="https://sede.sepe.gob.es/es/portaltrabaja/resources/pdf/especialidades/IFCT0109.pdf"
+                target="_blank"
+              >
+                seguridad informática.</a
+              >
+              Uno de mis hobbies son los retos CaptureTheFlag
+              <a href="https://ctftime.org/ctf-wtf/" target="_blank">CTF,</a>
+              suelo practicar en
+              <a
+                href="https://app.hackthebox.com/profile/520034/"
+                class="hvr-icon-forward hvr-icon3"
+                target="_blank"
+                >HackTheBox
+                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+              ></a>
+            </p>
+          </sec>
+        </section>
+      </article>
 
-        <div class="main-service">
-          <h3>Seguridad informática</h3>
-          <div class="main-serv_icons">
-            <img
-              src="img/fly-d-C5pXRFEjq3w-unsplash2.jpg"
-              class="main-serv_img"
-              width="200em"
-              height="250em"
-            />
-          </div>
-          <p>
-            Realizé un CP de<a
-              href="https://sede.sepe.gob.es/es/portaltrabaja/resources/pdf/especialidades/IFCT0109.pdf"
-              target="_blank"
-            >
-              seguridad informática.</a
-            >
-            Uno de mis hobbies son los
-            <a href="https://ctftime.org/ctf-wtf/" target="_blank">CTF,</a>
-            suelo practicar en
-            <a href="https://app.hackthebox.com/profile/520034/" target="_blank"
-              >HackTheBox</a
-            >
-          </p>
-        </div>
-      </div>
+      <article class="main-technologies">
+        <h2>Tecnologías</h2>
+        <article class="main-technologies__flex">
+          <section class="main-technology">
+            <h3>HTML5</h3>
+            <i class="fab fa-html5"></i>
+          </section>
+          <section class="main-technology">
+            <h3>CSS3</h3>
+            <i class="fab fa-css3"></i>
+          </section>
+          <section class="main-technology">
+            <h3>JavaScript</h3>
+            <i class="fab fa-js"></i>
+          </section>
+          <section class="main-technology">
+            <h3>BootStrap</h3>
+            <i class="fab fa-bootstrap"></i>
+          </section>
+          <section class="main-technology">
+            <h3>PHP</h3>
+            <i class="fab fa-php"></i>
+          </section>
+          <section class="main-technology">
+            <h3>Python</h3>
+            <i class="fab fa-python"></i>
+          </section>
+          <section class="main-technology">
+            <h3>SQL</h3>
+            <i class="fas fa-database"></i>
+          </section>
+        </article>
+      </article>
 
-      <div class="main-certificates" id="certificados">
+      <article class="main-certificates" id="certificados">
         <h2>Certificaciones</h2>
         <br />
         <h3>MTA: Microsoft Technology Associate</h3>
         <br />
-        <div class="main-certificates__items">
+        <section class="main-certificates__items">
           <div class="main-certificates__item">
             <p>MTA-HTML & CSS</p>
             <img src="certificados/MTA-HTML&CSS.png" alt="MTA-HTML" />
@@ -216,7 +258,7 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=397&cvid=KTbeo9HEUIIRSw2+GvMVbw=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
@@ -230,7 +272,7 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=168&cvid=Xl3GqPNcxOANRHLrRiJZRQ=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
@@ -247,7 +289,7 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=133&cvid=9ROtMQZbH5Qn6w+BqgCVyw=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
@@ -261,7 +303,7 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=135&cvid=ckwP9xbm9UFvvAsZ4Ynikw=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
@@ -275,7 +317,7 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=134&cvid=k+uZFh/3WM/4ozm9jldBmw=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
@@ -289,12 +331,12 @@
                 href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=132&cvid=onHAdKy7yuYN9cDbxmzMEg=="
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver PDF
+                >Ver Original
                 <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
               ></a>
             </p>
           </div>
-        </div>
+        </section>
         <div class="main-certificates__verify">
           <p>
             <a
@@ -309,47 +351,27 @@
             Transcript ID: 1305581 <br />Access Code: luishcr7
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="main-location" id="contacto">
+      <article class="main-location">
         <h2>Contacto</h2>
         <p>
-          Mi correo electrócnico/E-mail es: <br />
-          <a href="mailto:luishcr@pm.me" class="hvr-grow"
-            >luishcr@pm.me</a
-          >
+          Puedes contactar conmigo a través de la redes sociales o rellenando el
+          siguiente formulario.<br />
+          <a href="contact.html" class="hvr-icon-forward hvr-icon3"
+            >FORMULARIO
+            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+          ></a>
         </p>
         <br />
-<!--         <p>
-          (OPCIONAL) Para mayor seguridad y privacidad de los datos, deberías
-          cifrar los correos electrónicos que envías por internet. Una forma
-          sencilla de hacerlo es utilizando la extensión gratuita para tu
-          navegador Chrome o Firefox <b>Mailvelope. </b> <br />
-          <a
-            href="https://www.redeszone.net/tutoriales/seguridad/cifrado-pgp-gmail-outlook-mailvelope/"
-            class="hvr-icon-forward hvr-icon3"
-            target="_blank"
-          >
-            ¿Qué es Mailvelope?
-            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i></a
-          ><br />
-          <a
-            href="https://keys.mailvelope.com/pks/lookup?op=get&search=contacto@luishcr.es"
-            class="hvr-icon-forward hvr-icon3"
-            target="_blank"
-          >
-            Mi PK/Clave Pública
-            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i></a
-          ><br />
-        </p> -->
 
         <i class="fas fa-map-marked-alt"></i>
-        <p>Alicante/Alacant, España</p>
+        <p>Desde Alicante/Alacant para el mundo ♥</p>
         <br />
         <a href="#sobremi" class="hvr-icon-up hvr-icon" id="contact"
           >Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i
         ></a>
-      </div>
+      </article>
     </main>
 
     <!--  Termina main  -->
@@ -399,7 +421,7 @@
         <br />
       </div>
       <div class="footer--legal">
-        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="legal-info.html">Aviso legal</a>
       </div>
     </footer>
 

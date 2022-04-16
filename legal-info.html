@@ -1,20 +1,19 @@
-<!-- <!DOCTYPE html> -->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LuisHCRProject</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>👨🏽‍💻 LuisHCRWebsite</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/all.min.css">
+    <!-- <link rel="preload" href="css/styles.css" as="style"> -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="preload" href="css/all.min.css" as="style"> -->
+    <link rel="stylesheet" href="css/all.min.css" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script defer type="text/javascript" src="js/index.js"></script>
 
-  <script defer type="text/javascript" src="js/index.js"></script>
-
+    <!-- <script defer src="js/particles.js"></script> -->
   </head>
 
 <body>
@@ -23,56 +22,88 @@
 
   <!-- Inicia el menú de navegación -->
 
-
-  <div class="nav-background">
-    <nav class="nav">
-
+  <header class="nav-menu__background">
+    <nav class="nav-menu">
       <div class="nav-responsive">
         <div class="nav-logo">
-          <a href="index.html#inicio"> <img src="img/LogoMakr-306kZJ.png" width="55px" height="55px" alt="LOGO">
+          <a href="index.html">
+            <img
+              src="img/LogoMakr-306kZJ.png"
+              width="55px"
+              height="55px"
+              alt="LOGO"
+            />
             <span>
-              <img src="img/LogoMakr-7bM4w8.png" width="55px" height="55px" alt="LOGO2">
+              <img
+                src="img/LogoMakr-7bM4w8.png"
+                width="55px"
+                height="55px"
+                alt="LOGO2"
+              />
             </span>
           </a>
         </div>
-        <button class="nav-toggle" onclick="showmenu()">
-          <img src="img/toggle.png" width="40px" height="30px" alt="toggle">
+        <button class="nav-toggle" id="nav-toggle">
+          <img src="img/toggle.png" width="40px" height="30px" alt="toggle" />
         </button>
       </div>
 
       <div class="nav-logo nav-logo_hider">
-        <a href="index.html#inicio"> <img src="img/LogoMakr-306kZJ.png" width="55px" height="55px" alt="LOGO">
+        <a href="index.html">
+          <img
+            src="img/LogoMakr-306kZJ.png"
+            width="55px"
+            height="55px"
+            alt="LOGO"
+          />
           <span>
-            <img src="img/LogoMakr-7bM4w8.png" width="55px" height="55px" alt="LOGO2">
+            <img
+              src="img/LogoMakr-7bM4w8.png"
+              width="55px"
+              height="55px"
+              alt="LOGO2"
+            />
           </span>
         </a>
       </div>
 
       <div class="nav-links nav-links_hider" id="id-links">
-        <a href="index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
-        <a href="blog.html#indice"><i class="fas fa-book"></i> Blog</a>
-        <a href="LuisHCR_CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Currículum</a>
-        <a href="index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+        <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="blog.html"><i class="fas fa-book"></i> Blog</a>
+        <a href="portfolio.html" 
+          ><i class="fas fa-file-code"></i> Portafolio</a
+        >
+        <a href="LuisHCR_CV.pdf" target="_blank"
+          ><i class="fas fa-file-pdf"></i> Currículum</a
+        >
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contacto</a>
       </div>
-
-    </nav>  
-  </div>
-
+    </nav>
+  </header>
   <!-- Termina el menú de navegación -->
-
-
-
 
   <!--  Inicia barra de iconos  -->
 
-  <div class="bar-icons">
+  <nav class="bar-icons">
     <ul class="bar-icons_list">
-      <li class="bar-icons_item"> <a href="https://www.linkedin.com/in/luishcr" target="_blank"> <i class="fab fa-linkedin "> </i> </a> </li>
-      <li class="bar-icons_item"> <a href="https://github.com/LuisHCR" target="_blank"> <i class="fab fa-github-square"> </i> </a> </li>
-      <li class="bar-icons_item"> <a href="https://twitter.com/LuisHCR7" target="_blank"> <i class="fab fa-twitter-square"> </i> </a> </li>
-      <li class="bar-icons_item"> <a href="https://t.me/joinchat/lGZzGN47vF42ZTI8" target="_blankS"> <i class="fab fa-telegram"></i> </a> </li>
+      <li class="bar-icons_item">
+        <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+          <i class="fab fa-linkedin"> </i>
+        </a>
+      </li>
+      <li class="bar-icons_item">
+        <a href="https://github.com/LuisHCR" target="_blank">
+          <i class="fab fa-github-square"> </i>
+        </a>
+      </li>
+      <li class="bar-icons_item">
+        <a href="https://twitter.com/luishcerre" target="_blank">
+          <i class="fab fa-twitter-square"> </i>
+        </a>
+      </li>
     </ul>
-  </div>
+  </nav>
+
 
   <!--  Termina barra de iconos  -->
 
@@ -142,7 +173,7 @@
       <p> &copy; LuisHCR</p><br>
     </div>
     <div class="footer--legal">
-      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="legal-info.html">Aviso legal</a>
     </div>
     
   </footer>

@@ -19,11 +19,11 @@
   <body>
     <!-- Inicia el menú de navegación -->
 
-    <header class="nav-menu__background" id="inicio">
+    <header class="nav-menu__background">
       <nav class="nav-menu">
         <div class="nav-responsive">
           <div class="nav-logo">
-            <a href="index.html#inicio">
+            <a href="index.html">
               <img
                 src="img/LogoMakr-306kZJ.png"
                 width="55px"
@@ -40,13 +40,13 @@
               </span>
             </a>
           </div>
-          <button class="nav-toggle" onclick="showmenu()">
+          <button class="nav-toggle" id="nav-toggle">
             <img src="img/toggle.png" width="40px" height="30px" alt="toggle" />
           </button>
         </div>
 
         <div class="nav-logo nav-logo_hider">
-          <a href="index.html#inicio">
+          <a href="index.html">
             <img
               src="img/LogoMakr-306kZJ.png"
               width="55px"
@@ -77,12 +77,11 @@
         </div>
       </nav>
     </header>
-
     <!-- Termina el menú de navegación -->
 
     <!--  Inicia barra de iconos  -->
 
-    <div class="bar-icons">
+    <nav class="bar-icons">
       <ul class="bar-icons_list">
         <li class="bar-icons_item">
           <a href="https://www.linkedin.com/in/luishcr" target="_blank">
@@ -100,98 +99,78 @@
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
 
     <!--  Termina barra de iconos  -->
 
     <!--  Inicia main  -->
 
     <main class="main boxshadow boxborder" id="indice">
-      <article main-blog>
-        <h2>
-          Blog<br />
-          (en construcción)
-        </h2>
+      <h2>Formulario de contacto</h2>
+
+      <article class="main-contact">
+        <form
+          name="contact-form"
+          class="contact-form"
+          method="POST"
+          data-netlify="true"
+        >
+          <fieldset>
+            <legend>Rellenar y enviar</legend>
+
+            <section class="contact-form__camps">
+              <div class="contact-form__camp">
+                <label for="nameInput"> Nombre: </label>
+                <input
+                  id="nameInput"
+                  class="contact-form__input"
+                  type="text"
+                  name="name"
+                  placeholder="Escribe tu nombre..."
+                />
+              </div>
+
+              <div class="contact-form__camp">
+                <label for="emailInput"> E-mail: </label>
+                <input
+                  id="emailInput"
+                  class="contact-form__input"
+                  type="e-mail"
+                  name="email"
+                  placeholder="Escribe tu email..."
+                  required
+                />
+              </div>
+
+              <div class="contact-form__camp">
+                <label for="messageInput"> Tu mensaje:</label>
+                <textarea
+                  id="messageInput"
+                  class="contact-form__input"
+                  name="message"
+                  rows="2"
+                  cols="20"
+                  required
+                ></textarea>
+              </div>
+            </section>
+
+            <section class="contact-form__camp form__button_right">
+              <input
+                type="submit"
+                class="contact-form__button"
+                value="Enviar"
+              />
+            </section>
+          </fieldset>
+        </form>
       </article>
 
-      <!--       <h3>ÍNDICE PRINCIPAL</h3>
-
-      <div class="blog__indice">
-        <details>
-          <summary>Electricidad/Electrónica</summary>
-          <ol>
-            <ul>
-              <a href="documents/REBT_BOE-326.pdf" target="_blank">REBT</a>
-            </ul>
-            <ul>
-              <a href="documents/Guia_REBT.pdf" target="_blank">Guía REBT</a>
-            </ul>
-          </ol>
-        </details>
-
-        <details open>
-          <summary>Programación</summary>
-          <ol>
-            <ul>
-              <a href="img/frontend.png" target="_blank">Roadmap</a>
-            </ul>
-            <ul>
-              <a href="cheatsheets/html5.pdf" target="_blank"
-                >CheatSheet HTML</a
-              >
-            </ul>
-            <ul>
-              <a href="cheatsheets/css3.pdf" target="_blank">CheatSheet CSS</a>
-            </ul>
-            <ul>
-              <a href="cheatsheets/javascript.pdf" target="_blank"
-                >CheatSheet Javascript</a
-              >
-            </ul>
-          </ol>
-        </details>
-
-        <details open>
-          <summary>Sysadmin/Ciberseguridad</summary>
-          <ol>
-            <ul>
-              <a href="img/devops.png" target="_blank">Roadmap</a>
-            </ul>
-            <ul>
-              <a href="documents/Linux Fundamentals.txt" target="_blank"
-                >Linux Fundamentals y Hacking Ético</a
-              >
-            </ul>
-            <ul>
-              <a href="documents/SQL Fundamentals.txt" target="_blank"
-                >SQL Fundamentals</a
-              >
-            </ul>
-            <ul>
-              <a href="documents/Docker Fundamentals.txt" target="_blank"
-                >Docker Fundamentals</a
-              >
-            </ul>
-          </ol>
-        </details>
-      </div> -->
-
-      <article class="main-location" id="contacto">
-        <h2>Contacto</h2>
-        <p>
-          Puedes contactar conmigo a través de la redes sociales o rellenando el
-          siguiente formulario<br />
-          <a href="contact.html" class="hvr-icon-forward hvr-icon3"
-            >FORMULARIO
-            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-          ></a>
-        </p>
-        <br />
-
+      <article class="main-location">
         <i class="fas fa-map-marked-alt"></i>
         <p>Desde Alicante/Alacant ♥ para el mundo.</p>
         <br />
-        <a href="#sobremi" class="hvr-icon-up hvr-icon" id="contact"
+        <a href="#indice" class="hvr-icon-up hvr-icon" id="contact"
           >Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i
         ></a>
       </article>
