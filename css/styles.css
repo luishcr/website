@@ -539,6 +539,10 @@ a {
   justify-content: flex-end;
 }
 
+.formInputHidden {
+  display: none;
+}
+
 /* TERMINA FORMULARIO DE CONTACTO */
 
 /* EFECTOS HOVER */

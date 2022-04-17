@@ -119,6 +119,8 @@
           name="contact-form"
           class="contact-form"
           method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
           data-netlify="true"
         >
           <fieldset>
@@ -133,6 +135,15 @@
                   type="text"
                   name="name"
                   placeholder="Escribe tu nombre..."
+                  required
+                />
+              </div>
+              <div class="formInputHidden contact-form__camp">
+                <label> No rellenes este campo: </label>
+                <input
+                  type="text"
+                  class="contact-form__input"
+                  name="bot-field"
                 />
               </div>
 
@@ -159,14 +170,19 @@
                   required
                 ></textarea>
               </div>
-            </section>
 
-            <section class="contact-form__camp form__button_right">
-              <input
-                type="submit"
-                class="contact-form__button"
-                value="Enviar"
-              />
+              <div
+                class="contact-form__camp"
+                data-netlify-recaptcha="true"
+              ></div>
+
+              <div class="contact-form__camp form__button_right">
+                <input
+                  type="submit"
+                  class="contact-form__button"
+                  value="Enviar"
+                />
+              </div>
             </section>
           </fieldset>
         </form>
