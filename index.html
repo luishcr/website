@@ -17,9 +17,7 @@
     ></script>
 
     <!-- JavaScript -->
-    <script defer type="text/javascript" src="js/index.js"></script>
-
-    <!-- <script defer src="js/particles.js"></script> -->
+    <script defer type="text/javascript" src="js/main.js"></script>
   </head>
 
   <body>
@@ -30,42 +28,22 @@
         <div class="nav-responsive">
           <div class="nav-logo">
             <a href="index.html">
-              <img
-                src="img/LogoMakr-306kZJ.png"
-                width="55px"
-                height="55px"
-                alt="LOGO"
-              />
+              <img src="img/LogoMakr-306kZJ.png" alt="LOGO" />
               <span>
-                <img
-                  src="img/LogoMakr-7bM4w8.png"
-                  width="55px"
-                  height="55px"
-                  alt="LOGO2"
-                />
+                <img src="img/LogoMakr-7bM4w8.png" alt="LOGO2" />
               </span>
             </a>
           </div>
-          <button class="nav-toggle" id="nav-toggle">
-            <img src="img/toggle.png" width="40px" height="30px" alt="toggle" />
+          <button class="nav-toggle">
+            <img src="img/toggle.png" alt="toggleNav" />
           </button>
         </div>
 
         <div class="nav-logo nav-logo_hider">
           <a href="index.html">
-            <img
-              src="img/LogoMakr-306kZJ.png"
-              width="55px"
-              height="55px"
-              alt="LOGO"
-            />
+            <img src="img/LogoMakr-306kZJ.png" alt="LOGO" />
             <span>
-              <img
-                src="img/LogoMakr-7bM4w8.png"
-                width="55px"
-                height="55px"
-                alt="LOGO2"
-              />
+              <img src="img/LogoMakr-7bM4w8.png" alt="LOGO2" />
             </span>
           </a>
         </div>
@@ -255,33 +233,16 @@
 
         <h3>MTA: Microsoft Technology Associate</h3>
         <br />
+
         <section class="main-certificates__items">
           <div class="main-certificates__item">
             <p>MTA-HTML & CSS</p>
             <img src="certificados/MTA-HTML&CSS.png" alt="MTA-HTML" />
-            <p>
-              <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=397&cvid=KTbeo9HEUIIRSw2+GvMVbw=="
-                class="hvr-icon-forward hvr-icon3"
-                target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-              ></a>
-            </p>
           </div>
 
           <div class="main-certificates__item">
             <p>MTA-Windows OS</p>
             <img src="certificados/MTA-WindowsOS.png" alt="MTA-WindowsOS" />
-            <p>
-              <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=168&cvid=Xl3GqPNcxOANRHLrRiJZRQ=="
-                class="hvr-icon-forward hvr-icon3"
-                target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-              ></a>
-            </p>
           </div>
 
           <div class="main-certificates__item">
@@ -290,73 +251,63 @@
               src="certificados/MTA-WindowsServer.png"
               alt="MTA-WindowsServer"
             />
-            <p>
-              <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=133&cvid=9ROtMQZbH5Qn6w+BqgCVyw=="
-                class="hvr-icon-forward hvr-icon3"
-                target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-              ></a>
-            </p>
           </div>
 
           <div class="main-certificates__item">
             <p>MTA-Security</p>
             <img src="certificados/MTA-Security.png" alt="MTA-Security" />
-            <p>
-              <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=135&cvid=ckwP9xbm9UFvvAsZ4Ynikw=="
-                class="hvr-icon-forward hvr-icon3"
-                target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-              ></a>
-            </p>
           </div>
 
           <div class="main-certificates__item">
             <p>MTA-Networking</p>
             <img src="certificados/MTA-Networking.png" alt="MTA-Networking" />
-            <p>
-              <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=134&cvid=k+uZFh/3WM/4ozm9jldBmw=="
-                class="hvr-icon-forward hvr-icon3"
-                target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
-              ></a>
-            </p>
           </div>
 
           <div class="main-certificates__item">
             <p>MTA-Database</p>
             <img src="certificados/MTA-Database.png" alt="MTA-Database" />
+          </div>
+        </section>
+
+        <section>
+          <div class="certificate__principal-container">
+            <div class="certificate__intern-container">
+              <img
+                src="certificados/MTA-HTML&CSS.png"
+                id="img-active"
+                alt="MTA-HTML"
+              />
+              <button id="btn-img_close" type="button">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <button id="btn-img_forward" type="button">
+                <i class="fas fa-angle-right"></i>
+              </button>
+              <button id="btn-img_backward" type="button">
+                <i class="fas fa-angle-left"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="main-certificates__verify">
+          <div>
             <p>
               <a
-                href="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=132&cvid=onHAdKy7yuYN9cDbxmzMEg=="
+                href="https://mcp.microsoft.com/Anonymous//Transcript/Validate"
                 class="hvr-icon-forward hvr-icon3"
                 target="_blank"
-                >Ver Original
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i
+                ><b
+                  >MCP-Validation
+                  <i
+                    class="fas fa-angle-right hvr-icon-forward hvr-icon3"
+                  ></i></b
               ></a>
+              <br />
+              Transcript ID: 1305581 <br />Access Code: luishcr7
             </p>
           </div>
         </section>
-        <div class="main-certificates__verify">
-          <p>
-            <a
-              href="https://mcp.microsoft.com/Anonymous//Transcript/Validate"
-              class="hvr-icon-forward hvr-icon3"
-              target="_blank"
-              ><b
-                >MCP-Validation
-                <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i></b
-            ></a>
-            <br />
-            Transcript ID: 1305581 <br />Access Code: luishcr7
-          </p>
-        </div>
       </article>
 
       <article class="main-location">
@@ -386,19 +337,9 @@
     <footer class="footer">
       <div class="nav-logo">
         <a href="index.html">
-          <img
-            src="img/LogoMakr-306kZJ.png"
-            width="77px"
-            height="77px"
-            alt="LOGO"
-          />
+          <img src="img/LogoMakr-306kZJ.png" alt="LOGO" />
           <span>
-            <img
-              src="img/LogoMakr-7bM4w8.png"
-              width="77px"
-              height="77px"
-              alt="LOGO2"
-            />
+            <img src="img/LogoMakr-7bM4w8.png" alt="LOGO2" />
           </span>
         </a>
       </div>

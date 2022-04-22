@@ -68,11 +68,23 @@ a {
   margin: 0 auto;
 }
 
+/* TAMAÑO LOGOS */
+.nav-menu .nav-logo img {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.footer .nav-logo img {
+  width: 7.7rem;
+  height: 7.7rem;
+}
+
 /* CENTRAR LOGO DEL FOOTER */
 .nav-logo {
   text-align: center;
 }
 
+/* ANIMACIÓN LOGO HOVER */
 .nav-logo a,
 .nav-logo img,
 .nav-logo a span {
@@ -90,8 +102,8 @@ a {
   opacity: 0;
   filter: alpha(opacity=0);
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 .nav-logo a:hover span {
@@ -136,6 +148,11 @@ a {
   border: none;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nav-toggle img {
+  width: 4rem;
+  height: 3rem;
 }
 
 /*  TERMINA MENÚ DE NAVEGACIÓN */
@@ -265,12 +282,70 @@ a {
 
 .main-certificates__item img {
   width: 100%;
+  cursor: pointer;
 }
 
 .main-certificates__item p {
   text-align: center;
   color: var(--purple);
   padding: 1rem;
+}
+
+.main-certificates #img-active {
+  width: 100%;
+  height: auto;
+}
+
+.certificate__intern-container > button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: absolute;
+}
+
+.certificate__intern-container #btn-img_close {
+  color: var(--white);
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.certificate__intern-container #btn-img_forward {
+  color: var(--purple);
+  top: 50%;
+  right: 0;
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.certificate__intern-container #btn-img_backward {
+  color: var(--purple);
+  top: 50%;
+  left: 0;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+.certificate__principal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.certificate__intern-container {
+  width: 70rem;
+  height: 50rem;
+  border: 0.2rem var(--white) solid;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .main-certificates__verify {
@@ -470,8 +545,8 @@ a {
 /* FORMULARIO DE CONTACTO */
 
 .main-contact {
-  margin: 2rem;
-  padding: 2rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .contact-form {
