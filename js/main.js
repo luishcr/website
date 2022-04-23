@@ -3,8 +3,25 @@ const navToggle = document.querySelector(".nav-toggle");
 navToggle.addEventListener("click", showMenu);
 
 function showMenu() {
-  document.querySelector("#id-links").classList.toggle("nav-links_hider");
+  document.querySelector("#nav-links").classList.toggle("nav-links_hider");
 }
+
+// Ocultar/mostrar logos blancos
+const yellowLogos = document.querySelectorAll(".yellow-logos");
+const whiteLogos = document.querySelectorAll(".white-logos");
+
+yellowLogos.forEach((logo) => {
+  logo.addEventListener("mouseover", () => {
+    whiteLogos.forEach((logo) => {
+      logo.style.visibility = "hidden";
+    });
+  });
+  logo.addEventListener("mouseout", () => {
+    whiteLogos.forEach((logo) => {
+      logo.style.visibility = "visible";
+    });
+  });
+});
 
 // Zoom en certificados
 const bntImgClose = document.querySelector("#btn-img_close");
