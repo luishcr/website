@@ -15,7 +15,7 @@
   --secondary-color: #fffefe;
   --terciary-color: #fcec11;
   --light-color: #fdf8b4;
-  --dark-color: #070707;
+  --dark-color: #202020;
   --neutral-color: #bbbbbb;
 }
 
@@ -28,7 +28,11 @@ body {
   min-height: 100vh;
   font-size: 2rem;
   font-family: Helvetica, sans-serif;
-  background-image: linear-gradient(to top, var(--neutral-color) 0%, var(--dark-color) 65%);
+  background-image: linear-gradient(
+    to top,
+    var(--neutral-color) 0%,
+    var(--dark-color) 65%
+  );
 }
 
 a {
@@ -48,7 +52,6 @@ a {
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px double var(--dark-color);
 }
-
 
 /*  ESTILOS NAVBAR  */
 
@@ -156,7 +159,6 @@ a {
   height: 3rem;
 }
 
-
 /*  ESTILOS SOCIAL NAVBAR  */
 
 .bar-icons {
@@ -187,7 +189,6 @@ a {
   color: var(--terciary-color);
   transition: 500ms;
 }
-
 
 /* ESTILOS MAIN */
 
@@ -390,7 +391,6 @@ a {
   font-size: 2rem;
 }
 
-
 /* ESTILOS FOOTER */
 
 .footer {
@@ -431,7 +431,6 @@ a {
   transition: 300ms;
 }
 
-
 /* RESPONSIVE / MEDIA QUERIES */
 
 @media (max-width: 720px) {
@@ -459,7 +458,7 @@ a {
     flex-direction: column;
     align-items: center;
     row-gap: 4rem;
-    height: 90vh;  
+    height: 90vh;
   }
 
   .nav-links a {
@@ -502,7 +501,6 @@ a {
     column-gap: 2rem;
   }
 }
-
 
 /* ESTILOS FORMULARIO DE CONTACTO */
 
@@ -604,8 +602,6 @@ a {
   margin: 2rem;
 }
 
-
-
 /* ANIMACIONES EFECTOS HOVER */
 
 /* Icon Up */
@@ -659,7 +655,6 @@ a {
   animation-timing-function: ease-out;
 }
 
-
 /* Icon Down */
 
 @-webkit-keyframes hvr-icon-down {
@@ -711,7 +706,6 @@ a {
   animation-timing-function: ease-out;
 }
 
-
 /* Icon Forward */
 
 .hvr-icon-forward {
@@ -740,7 +734,6 @@ a {
   transform: translateX(4px);
 }
 
-
 /* Grow */
 
 .hvr-grow {
@@ -760,59 +753,3 @@ a {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-
-
-/* p {
-  margin: 15px 0;
-  line-height: 1.8;
-}
-
-
-
-// .btn:focus {
-//   outline: none;
-// }
-
-// .btn:hover {
-//   transform: scale(0.98);
-// }
-
-// .btn-back {
-//   background: #f4f4f4;
-//   color: #000;
-//   margin-bottom: 20px;
-// }
-
-
-// .card-page {
-//   padding: 15px 30px;
-// }
-
-// .post-title {
-//   margin: 10px 0;
-// }
-
-// .post-date {
-//   background: #f4f4f4;
-//   margin-bottom: 20px;
-//   margin-top: 10px;
-//   padding: 3px 10px;
-// }
-
-// .post-body ul,
-// ol {
-//   font-size: 110%;
-//   line-height: 2.3;
-//   font-weight: bold;
-//   margin: 10px 0;
-// }
-
-// .post-body pre {
-//   background: #f4f4f4;
-//   padding: 20px;
-//   margin: 20px 0;
-//   line-height: 2.3;
-// }
-
-
