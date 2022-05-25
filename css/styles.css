@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap");
+
 /*  RESET CSS  */
 *,
 *:before,
@@ -27,7 +29,7 @@ html {
 body {
   min-height: 100vh;
   font-size: 2rem;
-  font-family: Helvetica, sans-serif;
+  font-family: "Azeret Mono", Helvetica, sans-serif;
   background-image: linear-gradient(
     to top,
     var(--neutral-color) 0%,
