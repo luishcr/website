@@ -1,2 +1,2 @@
 ## WebSite
-Esta es mi primera página en español https://luishcr.es 
+Mi primera página: https://luishcr.es 

@@ -438,43 +438,6 @@ a {
   transition: 300ms;
 }
 
-/* ESTILOS PORTAFOLIO */
-.ejercicios-js {
-  margin: 1rem;
-  margin-bottom: 4rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  column-gap: 4rem;
-}
-
-.ejercicios-js figure {
-  margin-top: 2rem;
-  border: 1px solid gray;
-  max-width: 70rem;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.ejercicios-js figure img {
-  text-align: center;
-  width: 100%;
-}
-
-.ejercicios-js p {
-  margin-top: 2rem;
-  font-size: 2rem;
-  line-height: 3rem;
-}
-
-.ejercicios-js p a {
-  margin-top: 2rem;
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
 /* ESTILOS FORMULARIO DE CONTACTO */
 
 .main-contact {
