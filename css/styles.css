@@ -16,9 +16,10 @@
   --primary-color: #14274e;
   --secondary-color: #f1f6f9;
   --terciary-color: #51e3d4;
-  --light-color: #fdf8b4;
-  --dark-color: #202020;
-  --neutral-color: #bbbbbb;
+  --dark-color: #191919;
+  --light-color: #f3ecd3;
+  --neutral-color: #9ba4b4;
+  --container-background-color: #ffffff;
 }
 
 html {
@@ -30,6 +31,7 @@ body {
   min-height: 100vh;
   font-size: 2rem;
   font-family: "Azeret Mono", Helvetica, sans-serif;
+  background-color: var(--secondary-color);
 }
 
 a {
@@ -184,7 +186,7 @@ a {
 .bar-icons_item i {
   color: var(--primary-color);
   user-select: none;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 .bar-icons_item i:hover {
@@ -200,6 +202,7 @@ a {
   max-width: 120rem;
   margin: 2rem auto;
   padding: 1.5rem;
+  background-color: var(--container-background-color);
 }
 
 .main h2 {
@@ -438,106 +441,6 @@ a {
 .footer--legal a:hover {
   color: var(--terciary-color);
   transition: 300ms;
-}
-
-/* ESTILOS FORMULARIO DE CONTACTO */
-
-.main-contact {
-  margin: 1rem 0rem;
-  padding: 1rem 0rem;
-}
-
-.contact-form {
-  background-color: var(--primary-color);
-  width: min(60rem, 100%); /* Utiliza el valo más pequeño */
-  margin: 0 auto;
-  padding: 2rem;
-  border: 0.4rem var(--neutral-color) solid;
-  border-radius: 1rem;
-}
-
-.contact-form fieldset {
-  border: none;
-}
-
-.contact-form fieldset legend {
-  margin: auto;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: var(--light-color);
-}
-
-.contact-form__camp {
-  margin-bottom: 2rem;
-}
-
-.contact-form__camp label {
-  color: var(--secondary-color);
-  font-weight: bold;
-  margin: 0.5rem 0rem;
-  display: block;
-}
-
-.contact-form__input {
-  width: 100%;
-  font-size: 2rem;
-  border: none;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.contact-form__button {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  padding: 1rem 3rem;
-  margin-top: 3rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bolder;
-  border-radius: 0.5rem;
-  text-align: center;
-  border: none;
-}
-
-.contact-form__button:hover {
-  cursor: pointer;
-  background-color: var(--terciary-color);
-}
-
-.form__button_right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/*  Netlify Honeypot Validation  */
-.formInputHidden {
-  display: none;
-}
-
-/*  Success Page  */
-.main-success {
-  margin: 2rem auto;
-  width: 50rem;
-  background-color: aquamarine;
-  text-align: center;
-  border: 1px solid var(--neutral-color);
-  border-radius: 1rem;
-}
-
-.main-success h3 {
-  margin: 2rem;
-}
-
-.main-success i {
-  padding: 0.5rem;
-  color: var(--dark-color);
-  font-size: 2rem;
-}
-
-.main-success p {
-  margin: 2rem;
 }
 
 /* ANIMACIONES EFECTOS HOVER */
