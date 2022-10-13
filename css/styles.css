@@ -286,6 +286,15 @@ a {
   margin-bottom: 4rem;
 }
 
+.main-badges__items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
 .main-certificates__item {
   margin: 1rem;
 }
