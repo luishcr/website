@@ -20,6 +20,8 @@
   --light-color: #f3ecd3;
   --neutral-color: #9ba4b4;
   --container-background-color: #ffffff;
+  --darkmode-background-color: #2a2a2a;
+  --darkmode-container-color: #181a1b;
 }
 
 html {
@@ -32,6 +34,7 @@ body {
   font-size: 1.6rem;
   font-family: "Azeret Mono", Helvetica, sans-serif;
   background-color: var(--secondary-color);
+  transition: 0.3s ease all;
 }
 
 a {
@@ -50,6 +53,29 @@ a {
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
   border: 0px double var(--dark-color);
+}
+
+
+/* ESTILOS DARKMODE */
+
+body.dark {
+  background-color: var(--darkmode-background-color);
+}
+
+body.dark nav.bar-icons a,  body.dark nav.bar-icons i {
+  color: var(--secondary-color);
+}
+
+body.dark nav.bar-icons i:hover {
+  color: var(--terciary-color);
+}
+
+body.dark .boxshadow{
+  background-color: var(--darkmode-container-color);
+}
+
+body.dark main,  body.dark main h2, body.dark main h3, body.dark main p, body.dark main a, body.dark main i {
+  color: var(--secondary-color);
 }
 
 /*  ESTILOS NAVBAR  */
@@ -158,7 +184,6 @@ a {
 }
 
 /*  ESTILOS SOCIAL NAVBAR  */
-
 .bar-icons {
   padding: 1rem;
 }
@@ -194,6 +219,59 @@ a {
   background-size: contain;
   color: var(--terciary-color);
   transition: 500ms;
+}
+
+.bar-icons_item .switch {
+  background-color: #333;
+  border-radius: 10rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+}
+
+.bar-icons_item .switch i {
+  color: var(--terciary-color);
+  font-size: 1.7rem;
+  pointer-events: none;
+}
+
+.bar-icons_item .switch::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  background-color: #fafafa;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease all;
+  right: unset;
+  border-radius: 10rem;
+  box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.bar-icons_item .switch.active {
+  background-color: var(--terciary-color);
+  color: #101010;
+}
+.bar-icons_item .switch.active i{
+  color: #333;
+}
+
+.bar-icons_item .switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.bar-icons_item .switch span {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  display: block;
+  background: none;
+  color: #fafafa;
 }
 
 /* ESTILOS MAIN */
@@ -638,7 +716,7 @@ a {
     flex-direction: column;
     align-items: center;
     row-gap: 4rem;
-    height: 90vh;
+    height: 77vh;
   }
 
   .nav-links a {
@@ -679,5 +757,12 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-badges__items {
+    flex-direction: column;
+  
   }
 }

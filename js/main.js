@@ -1,9 +1,39 @@
 // Función para mostar/ocultar menú de navegación responsive
 const navToggle = document.querySelector(".nav-toggle");
 navToggle.addEventListener("click", showMenu);
+const navLinks = document.querySelector("#nav-links");
 
 function showMenu() {
-  document.querySelector("#nav-links").classList.toggle("nav-links_hider");
+  navLinks.classList.toggle("nav-links_hider");
+  if (navLinks.classList.contains("nav-links_hider")) {
+    navToggle.innerHTML = `<img src="img/toggle.png" alt="Burger Button"></img>`;
+  } else {
+    navToggle.innerHTML = `<img src="img/close.png" alt="Close Button"></img>`;
+  }
+}
+
+// Switcher Dark-mode
+const btnSwitch = document.querySelector(".bar-icons_item .switch");
+
+btnSwitch.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  btnSwitch.classList.toggle("active");
+
+  // Persistent Dark-mode
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark-mode", "true");
+  } else {
+    localStorage.setItem("dark-mode", "false");
+  }
+});
+
+// Get actual-mode
+if (localStorage.getItem("dark-mode") === "true") {
+  document.body.classList.add("dark");
+  btnSwitch.classList.add("active");
+} else {
+  document.body.classList.remove("dark");
+  btnSwitch.classList.remove("active");
 }
 
 // Ocultar/mostrar logos blancos
