@@ -1,3 +1,8 @@
 
 ## WebSite
-Mi primera página web: https://luishcr.es 
+Página web personal: https://luishcr.es 
+
+### Desarrollada con:
+- HTML5
+- CSS3
+- JavaScript
