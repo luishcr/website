@@ -1,8 +1,8 @@
 
-## WebSite
-Página web personal: https://luishcr.es 
+## Website
+Personal web: https://luishcr.com
 
-### Desarrollada con:
+### Developed with:
 - HTML5
 - CSS3
 - JavaScript
