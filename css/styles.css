@@ -221,6 +221,7 @@ body.dark main,  body.dark main h2, body.dark main h3, body.dark main p, body.da
   transition: 500ms;
 }
 
+/*  SWITCH DARK-MODE  */
 .bar-icons_item .switch {
   background-color: #333;
   border-radius: 10rem;
@@ -268,7 +269,7 @@ body.dark main,  body.dark main h2, body.dark main h3, body.dark main p, body.da
 .bar-icons_item .switch span {
   width: 2.5rem;
   height: 2.5rem;
-  line-height: 2.5rem;
+  line-height: 2.9rem;
   display: block;
   background: none;
   color: #fafafa;

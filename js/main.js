@@ -101,3 +101,16 @@ const certificateBackward = () => {
   imgNumber--;
 };
 bntImgBackbard.addEventListener("click", certificateBackward);
+
+/* BADGES */
+
+// // HTB Stats
+// fetch("https://www.hackthebox.com/badge/520034", {
+//   headers: {
+//     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64)",
+//   },
+
+// })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.error(error));
