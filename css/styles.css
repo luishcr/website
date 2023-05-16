@@ -303,7 +303,7 @@ body.dark main,  body.dark main h2, body.dark main h3, body.dark main p, body.da
 
 .main-description {
   padding: 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 
 .main-skill,
@@ -341,7 +341,7 @@ body.dark main,  body.dark main h2, body.dark main h3, body.dark main p, body.da
 
 .main-technologies {
   max-width: 85rem;
-  margin: 10rem auto;
+  margin: 4rem auto;
 }
 
 .main-technologies__flex {
