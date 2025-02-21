@@ -1,6 +1,6 @@
 
 ## Website
-Personal web: https://luishcr.com
+Personal web: [https://luishcr.com](https://luishcr.github.io/website/index.html)
 
 ### Developed with:
 - HTML5
